@@ -1,0 +1,23 @@
+<config>    
+    <modules>
+        <TestingMagento_Holamundo>
+            <version>0.1.0</version>
+        </TestingMagento_Holamundo>
+    </modules>
+
+    <frontend>
+        <routers>
+            <holamundo>
+                <use>standard</use>
+                <args>
+                    
+                    <frontName>holamundo</frontName>
+                    <module>TestingMagento_Holamundo</module>
+                </args>
+            </holamundo>
+        </routers>  
+    </frontend>
+
+
+
+</config>   

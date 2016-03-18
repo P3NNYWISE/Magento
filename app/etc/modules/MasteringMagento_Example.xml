@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+/**
+ * app/etc/modules/MasteringMagento_Example.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<config>
+    <modules>
+        <MasteringMagento_Example>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends />
+        </MasteringMagento_Example>
+    </modules>
+</config>

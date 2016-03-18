@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+/**
+ * app/code/local/MasteringMagento/Example/etc/adminhtml.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<config>
+    <menu>
+        <example translate="title" module="example">
+            <title>Example</title>
+            <sort_order>1000</sort_order>
+            <action>adminhtml/example</action>
+        </example>
+    </menu>
+</config>

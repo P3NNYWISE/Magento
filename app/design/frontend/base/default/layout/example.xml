@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout>
+<!--
+/**
+ * app/design/frontend/base/default/layout/example.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<layout version="0.1.0">
+    <example_index_index>
+    	
+        <update handle="page_two_columns_right" />
+        <reference name ="content">
+        	<block 	type="core/template" template="example/welcome.phtml" />
+
+        </reference>
+
+
+    </example_index_index>
+</layout>
