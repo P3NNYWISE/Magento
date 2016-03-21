@@ -13,24 +13,13 @@
  * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
  */
 -->
-<!--
+
 <config>
     <menu>
         <example translate="title" module="example">
             <title>Example</title>
             <sort_order>1000</sort_order>
             <action>adminhtml/example</action>
-        </example>
-    </menu>
-</config>
--->
-<config>
-    <menu>
-        <example translate="title" module="example">
-            <title>Events</title>
-            <sort_order>1000</sort_order>
-            <action>adminhtml/event</action>
-            <!-- controllers/Adminhtml/EventController.php-->
         </example>
     </menu>
 </config>

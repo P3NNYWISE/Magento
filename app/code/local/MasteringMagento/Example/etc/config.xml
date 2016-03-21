@@ -72,20 +72,6 @@
             </example>
         </helpers>
 
-<!-- Event Handling video 3.5 -->
-    <events>
-        <controller_action_predispatch>
-            <observers>
-                <example_observer>
-                    <class>example/observer</class>
-                    <method>controllerActionPredispatch</method>
-                </example_observer>
-            </observers>
-        </controller_action_predispatch>
-    </events>
-
-
-
 
 
 
