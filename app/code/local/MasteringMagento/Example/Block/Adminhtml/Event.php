@@ -21,4 +21,8 @@ class MasteringMagento_Example_Block_Adminhtml_Event extends Mage_Adminhtml_Bloc
 
         parent::__construct();
     }
+
+
 }
+
+

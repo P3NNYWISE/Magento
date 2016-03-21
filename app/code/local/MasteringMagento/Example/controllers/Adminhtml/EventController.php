@@ -18,11 +18,31 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
         $this->_setActiveMenu('example/events');
 
         $this->_addContent(
+            $this->getLayout()->createBlock('example/adminhtml_event')
+        );
+
+        return $this->renderLayout();
+    }
+
+
+
+        public function newAction()
+    {
+        $this->_forward('edit');
+    }
+
+    public function editAction()
+    {
+        $this->loadLayout();
+        $this->_setActiveMenu('example/events');
+
+        $this->_addContent(
             $this->getLayout()->createBlock('example/adminhtml_event_edit')
         );
 
         return $this->renderLayout();
     }
+
 
     public function saveAction()
     {

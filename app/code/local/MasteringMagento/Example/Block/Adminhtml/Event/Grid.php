@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * app/code/local/MasteringMagento/Block/Adminhtml/Event.php
  *
