@@ -16,15 +16,51 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>0.0.0</version>
+            <version>0.0.1</version>
         </MasteringMagento_Example>
     </modules>
     <global>
+
+<!-- Sin models
+
         <models>
             <example>
                 <class>MasteringMagento_Example_Model</class>
             </example>
         </models>
+-->
+
+    <models>
+        <example>
+            <class>MasteringMagento_Example_Model</class>
+            <resourceModel>example_resource</resourceModel>
+        </example>
+        <example_resource>
+            <class>MasteringMagento_Example_Model_Resource</class>
+            <entities>
+                <event>
+                    <table>example_event</table>
+                </event>
+                <event_registrant>
+                    <table>example_event_registrant</table>
+                </event_registrant>
+            </entities>
+        </example_resource>
+    </models>
+    <!-- automatic script - db instalacion-->
+        <resources>
+        <example_setup>
+            <setup>
+                <module>MasteringMagento_Example</module>
+                <class>Mage_Core_Model_Resource_Setup</class>
+            </setup>
+        </example_setup>
+    </resources>
+
+
+
+
+
         <blocks>
             <example>
                 <class>MasteringMagento_Example_Block</class>
@@ -35,6 +71,25 @@
                 <class>MasteringMagento_Example_Helper</class>
             </example>
         </helpers>
+
+<!-- Event Handling video 3.5 -->
+    <events>
+        <controller_action_predispatch>
+            <observers>
+                <example_observer>
+                    <class>example/observer</class>
+                    <method>controllerActionPredispatch</method>
+                </example_observer>
+            </observers>
+        </controller_action_predispatch>
+    </events>
+
+
+
+
+
+
+
     </global>
     <admin>
         <routers>
@@ -73,5 +128,6 @@
             </updates>
         </layout>
     </frontend>
+
 
 </config>

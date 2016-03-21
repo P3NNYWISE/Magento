@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+/**
+ * app/code/local/MasteringMagento/Example/etc/system.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<config>
+    <sections>
+        <general translate="label">
+            <groups>
+                <example translate="label">
+                    <label>Example Options</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <some_field translate="label">
+                            <label>Some Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </some_field>
+                        <other_field translate="label">
+                            <label>Other Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </other_field>
+
+
+                    </fields>
+                </example>
+
+
+                <example1 translate="label">
+                    <label>Example1 Options</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <some_field translate="label">
+                            <label>Some Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </some_field>
+                        <other_field translate="label">
+                            <label>Other Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </other_field>
+
+
+                    </fields>
+                </example1>
+
+            </groups>
+        </general>
+
+
+
+
+
+
+
+
+    </sections>
+
+
+    <sections>
+        <web translate="label">
+            <groups>
+                <example translate="label">
+                    <label>Example Options</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <some_field translate="label">
+                            <label>Some Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </some_field>
+                        <other_field translate="label">
+                            <label>Other Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </other_field>
+
+
+                    </fields>
+                </example>
+
+
+                <example1 translate="label">
+                    <label>Example1 Options</label>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <some_field translate="label">
+                            <label>Some Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </some_field>
+                        <other_field translate="label">
+                            <label>Other Field</label>
+                            <frontend_type>text</frontend_type> <!-- More frontend types can be found in the lib/Varien/Data/Form/Element folder -->
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </other_field>
+
+
+                    </fields>
+                </example1>
+
+            </groups>
+        </web>
+
+
+
+
+
+
+
+
+    </sections>
+
+
+
+
+
+
+
+</config>
