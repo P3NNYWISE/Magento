@@ -23,4 +23,24 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
         return $this->renderLayout();
     }
+
+    public function saveAction()
+    {
+        $eventId = $this->getRequest()->getParam('event_id');
+        $eventModel = Mage::getModel('example/event')->load($eventId);
+
+        if ( $data = $this->getRequest()->getPost() ) {
+            try {
+                $eventModel->addData($data)->save();
+                Mage::getSingleton('adminhtml/session')->addSuccess(
+                    $this->__("Your event has been saved!")
+                );
+            } catch ( Exception $e ) {
+                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+            }
+        }
+
+        $this->_redirect('*/*/index');
+    }
 }
+

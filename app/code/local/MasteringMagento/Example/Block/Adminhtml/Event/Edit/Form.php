@@ -28,13 +28,6 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Edit_Form extends Mage_Admi
             'title'     => Mage::helper('example')->__('Event Name '),
             'required'  => true
         ));
-        $fieldset->addField('name1', 'text', array(
-            'name'      => 'name',
-            'label'     => Mage::helper('example')->__('Event Name 1'),
-            'title'     => Mage::helper('example')->__('Event Name 1'),
-            'required'  => false
-        ));
-
 
 
         $dateFormatIso = Mage::app()->getLocale()->getDateFormat(Mage_Core_Model_Locale::FORMAT_TYPE_SHORT);

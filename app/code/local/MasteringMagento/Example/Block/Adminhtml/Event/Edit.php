@@ -30,4 +30,9 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Edit extends Mage_Adminhtml
     {
         return Mage::helper('example')->__('New Event');
     }
+
+    public function getSaveUrl()
+    {
+        return $this->getUrl('*/event/save');
+    }
 }
