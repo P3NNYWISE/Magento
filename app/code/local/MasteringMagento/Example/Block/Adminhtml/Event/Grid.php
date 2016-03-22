@@ -48,6 +48,11 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Grid extends Mage_Adminhtml
             'header' => $this->__('End Date')
         ));
 
+
+        $this->addExportType('*/*/exportCsv', Mage::helper('example')->__('CSV'));
+        $this->addExportType('*/*/exportExcel', Mage::helper('example')->__('Excel XML'));
+
+
         return $this;
     }
 
