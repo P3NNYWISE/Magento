@@ -12,6 +12,14 @@
  */
 class MasteringMagento_Example_Block_Adminhtml_Event_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
+    public function getRowUrl($item)
+    {
+        // TODO follow along with the video!
+        return $this->getUrl('*/event/edit', array('event_id'=> $item->getId()));
+
+
+    }
+
     public function _prepareCollection()
     {
         $collection = Mage::getModel('example/event')->getCollection();
