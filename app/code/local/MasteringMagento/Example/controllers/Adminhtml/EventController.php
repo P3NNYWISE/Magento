@@ -74,5 +74,26 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
         return $this->_redirect('*/*/index');
     }
+
+    public function deleteAction()
+    {
+        $eventId = $this->getRequest()->getParam('event_id');
+        $eventModel = Mage::getModel('example/event')->load($eventId);
+
+   
+            try {
+                $eventModel->delete();
+                Mage::getSingleton('adminhtml/session')->addSuccess(
+                    $this->__("Your event has been deleted!")
+                );
+            } catch ( Exception $e ) {
+                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+                return $this->_redirect('*/*/edit', array('_current' => true));
+            }
+     
+
+        return $this->_redirect('*/*/index');
+    }
+
 }
 
