@@ -33,10 +33,7 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
     public function editAction()
     {
-/** 
 
-
-**/
         if ( $eventId = $this->getRequest()->getParam('event_id'))
         {
             mage::register('current_event',  Mage::getModel('example/event')->load($eventId));
@@ -94,6 +91,35 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
         return $this->_redirect('*/*/index');
     }
+
+   public function massDeleteAction()
+    {   
+         if ( $eventIds = $this->getRequest()->getParam('event_ids'))  {
+            try {
+                 foreach ($eventIds as $eventId) {
+
+                     # code...
+                     $model = Mage::getModel('example/event')->load($eventId);
+                     $model->delete();
+                 }
+                 Mage::getSingleton('adminhtml/session')->addSuccess(
+                     $this->__("%d event(s) have been deleted!",count($eventIds))
+                    );
+             } catch ( Exception $e ) {
+              Mage::getSingleton('adminhtml/session')->addError(
+                     $e->getMessage()
+                     );
+             }
+         }else 
+         {
+                 Mage::getSingleton('adminhtml/session')->addError(
+                     $this->__('you must select an event.')
+                     );
+         }
+
+         return $this->_redirect('*/*/index');
+    }
+
 
 }
 

@@ -50,4 +50,26 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Grid extends Mage_Adminhtml
 
         return $this;
     }
+
+    protected function _prepareMassaction()
+    {
+        // TODO follow along with the video!
+        $this->setMassactionIdField('event_id');
+        $this->getMassactionBlock()->setFormFieldName('event_ids');
+        
+        $this->getMassactionBlock()->addItem('delete_event',array (
+            //nombre en checkbox
+            'label'=> Mage::helper('example')->__('Delete'),
+            'url'=> $this->getUrl('*/*/massDelete'),
+            //Pide Confirmacion--
+            'confirm'=> Mage::Helper('example')->__('Are you sure?')
+            ));
+
+
+    
+        return $this;
+
+    }
+
+
 }
