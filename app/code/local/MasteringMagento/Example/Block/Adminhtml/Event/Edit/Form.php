@@ -14,6 +14,29 @@
  */
 class MasteringMagento_Example_Block_Adminhtml_Event_Edit_Form extends Mage_Adminhtml_Block_Widget_Form
 {
+
+
+
+/**
+    Inicializar el form con valores
+
+    ok
+**/
+
+    protected function _initFormValues()
+    {
+        //For editing existing events
+        if ( $event = Mage::registry('current_event'))
+        {
+            $data = $event->getData();
+            //Manipulate de $data..
+            $this->getForm()->setValues($data);
+        }
+        //In order to keep post data during a failed save
+        if ($data= Mage::getSingleton('adminhtml/session')->getData('event_form_data', true))
+            $this->getForm()->setValues($data);
+    }
+
     public function _prepareForm()
     {
         $form = new Varien_Data_Form(

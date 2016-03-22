@@ -33,6 +33,15 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
     public function editAction()
     {
+/** 
+
+
+**/
+        if ( $eventId = $this->getRequest()->getParam('event_id'))
+        {
+            mage::register('current_event',  Mage::getModel('example/event')->load($eventId));
+        }
+
         $this->loadLayout();
         $this->_setActiveMenu('example/events');
 
