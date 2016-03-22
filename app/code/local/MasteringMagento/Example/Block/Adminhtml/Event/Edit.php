@@ -33,6 +33,6 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Edit extends Mage_Adminhtml
 
     public function getSaveUrl()
     {
-        return $this->getUrl('*/event/save');
+        return $this->getUrl('*/event/save', array('_current'=>true));
     }
 }

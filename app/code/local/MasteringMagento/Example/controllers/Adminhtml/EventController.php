@@ -65,11 +65,14 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
                     $this->__("Your event has been saved!")
                 );
             } catch ( Exception $e ) {
+                Mage::getSingleton('adminhtml/session')->setEventFormData($data);
                 Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+                return $this->_redirect('*/*/edit', array('_current'=> true));
             }
+
         }
 
-        $this->_redirect('*/*/index');
+        return $this->_redirect('*/*/index');
     }
 }
 
