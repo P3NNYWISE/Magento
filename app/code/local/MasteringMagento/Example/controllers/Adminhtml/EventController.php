@@ -119,31 +119,32 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
 
          return $this->_redirect('*/*/index');
     }
-/**
-    Export data to csv
-**/
+    /**
+        Export data to csv
+    **/
 
     public function exportCsvAction()
     {
         // TODO follow along with the video!
         $filename = 'events.csv';
         $grid = $this->getLayout()->createBlock('example/adminhtml_event_grid');
-        $this->_prepareDownloadResponse($filename , $grid->getCsvFile($filename));
+        $this->_prepareDownloadResponse($filename , $grid->getCsvFile());
 
 
     }
 
-/**
-Export data to eXcel
-**/
-
+    /**
+    Export data to eXcel- it's not working
+    **/
     public function exportExcelAction()
     {
         // TODO follow along with the video!
 
-        $filename ='events.xlsx';
+        $filename ='events.xls';
         $grid =  $this->getLayout()->createBlock('example/adminhtml_event_grid');
         $this->_prepareDownloadResponse($filename , $grid->getExcelFile($filename));
     }
+
+
 }
 
