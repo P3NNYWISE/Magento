@@ -23,15 +23,16 @@ class MasteringMagento_Example_Model_Product_Attribute_Source_Event
         
         #$collection = Mage::app()->getModel('example/event')->getCollection();
         $collection = Mage::getModel('example/event')->getCollection();
-        
+  
         $options = array();
         foreach ( $collection as $event ) {
-            $option[] = array(
+            $options[] = array(
                 'value' => $event->getId(),
                 'label' => $event->getName()
             );
+            
         }
-
+        
         return $options;
     }
 }
