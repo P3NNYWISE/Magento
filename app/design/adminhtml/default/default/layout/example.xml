@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout>
+<!--
+/**
+ * app/design/adminhtml/default/default/layout/example.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<layout>
+    <adminhtml_catalog_product_event>
+        <reference name="product_tabs">
+            <action method="addTab"><name>event_info</name><block>example/adminhtml_catalog_product_edit_tab_event</block></action>
+        </reference>
+    </adminhtml_catalog_product_event>
+</layout>

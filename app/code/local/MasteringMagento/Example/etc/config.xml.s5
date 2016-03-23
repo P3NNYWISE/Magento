@@ -82,8 +82,7 @@
             </product>
         </catalog>
     </global>
-
-        <adminhtml>
+    <adminhtml>
         <layout>
             <updates>
                 <example>

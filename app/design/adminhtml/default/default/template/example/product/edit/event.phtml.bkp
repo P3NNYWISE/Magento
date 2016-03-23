@@ -1,0 +1,154 @@
+<?php
+/**
+ * app/design/adminhtml/default/default/example/product/edit/event.phtml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+?>
+<?php $_product = $this->getProduct()?>
+<div id="alert_messages_block"><?php echo $this->getMessageHtml() ?></div>
+
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4 class="icon-head head-edit-form fieldset-legend"><?php echo $this->getTabTitle() ?></h4>
+    </div>
+    <div class="fieldset">
+        <table cellspacing="0" class="form-list">
+            <tbody>
+                <tr>
+                    <td class="label"><label for="event_id">Event<span class="required">*</span></label></td>
+                    <td class="value">
+                        <?php
+                            $select = new Varien_Data_Form_Element_Select(array(
+                                'id' => 'event_id',
+                                'name' => 'product[event_id]',
+                                'value' => $_product->getData('event_id'),
+                                'values' => Mage::getModel('example/product_attribute_source_event')->getAllOptions(),
+                                'required' => true
+                            ));
+                            $select->setForm($this);
+                            echo $select->toHtml();
+                        ?>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="grid">
+            <div class="hor-scroll">
+                <table cellspacing="0" class="data border">
+                    <col />
+                    <col width="1"/>
+                    <col width="1" />
+                    <col width="1" />
+                    <thead>
+                        <tr class="headings">
+                            <th><?php echo Mage::helper('example')->__('Title')?> <span class="required">*</span></th>
+                            <?php if ($this->getCanReadPrice() !== false) : ?>
+                            <th><?php echo Mage::helper('example')->__('Price')?></th>
+                            <?php endif; ?>
+                            <th><span class="nobr"><?php echo Mage::helper('example')->__('Sort Order')?></span></th>
+                            <th>&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4" class="a-right"><?php echo $this->getAddButtonHtml()?></td>
+                        </tr>
+                    </tfoot>
+                    <tbody id="ticket_items_body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+
+    <script type="text/javascript">
+    //<![CDATA[
+    var ticketTemplate = '<tr>'+
+        '<td>'+
+            '<input type="hidden" class="__delete__" name="product[event_data][ticket][{{id}}][is_delete]" value="" />'+
+            '<input type="hidden" name="product[event_data][ticket][{{id}}][ticket_id]" value="{{ticket_id}}" />'+
+            '<input type="text" class="required-entry input-text" name="product[event_data][ticket][{{id}}][title]" value="{{title}}" />'+
+        '</td>'+
+        '<td class="input-price">'+
+            '<input type="text" id="downloadable_ticket_{{id}}_price_value" class="input-text validate-number ticket-prices<?php if ($this->getCanEditPrice() === false) : ?> disabled<?php endif; ?>" name="product[event_data][ticket][{{id}}][price]" value="{{price}}"<?php if ($this->getCanEditPrice() === false) : ?> disabled="disabled"<?php endif; ?> /> ' +
+            '<label>[<?php echo Mage::app()->getStore($_product->getStoreId())->getBaseCurrencyCode() ?>]</label>' +
+            <?php if ($_product->getStoreId() && $this->getIsPriceWebsiteScope()) : ?>
+            '<br /><input type="checkbox" id="downloadable_ticket_{{id}}_price" name="product[event_data][ticket][{{id}}][use_default_price]" value="1"<?php if ($this->getCanEditPrice() === false) : ?> disabled="disabled"<?php endif; ?> /> <label for="downloadable_ticket_{{id}}_price">Use Default Value</label>' +
+            <?php endif; ?>
+        '</td>' +
+
+        '<td class="a-center"><input type="text" name="product[event_data][ticket][{{id}}][sort_order]" value="{{sort_order}}" class="input-text sort" /></td>'+
+        '<td>'+
+            '<button id="downloadable_ticket_{{id}}_delete_button" type="button" class="scalable delete icon-btn delete-ticket-item"><span><span><span><?php echo Mage::helper('example')->__('Delete'); ?></span></span></span></button>'+
+        '</td>'+
+    '</tr>';
+
+    var ticketItems = {
+        tbody : $('ticket_items_body'),
+        templateSyntax : /(^|.|\r|\n)({{(\w+)}})/,
+        templateText : ticketTemplate,
+        ticketCount : 0,
+        add : function(data) {
+            alertAlreadyDisplayed = false;
+            this.template = new Template(this.templateText, this.templateSyntax);
+
+            if(!data.ticket_id){
+                data = {};
+                data.ticket_id  = 0;
+            }
+
+            data.id = this.ticketCount;
+
+            Element.insert(this.tbody, {'bottom':this.template.evaluate(data)});
+
+            this.ticketCount++;
+            this.bindRemoveButtons();
+        },
+        remove : function(event){
+            var element = $(Event.findElement(event, 'tr'));
+            alertAlreadyDisplayed = false;
+            if(element){
+                element.down('input[type="hidden"].__delete__').value = '1';
+                Element.select(element, 'div.flex').each(function(elm){
+                    elm.remove();
+                });
+                element.addClassName('no-display');
+                element.addClassName('ignore-validate');
+                element.hide();
+            }
+        },
+        bindRemoveButtons : function(){
+            var buttons = $$('tbody#ticket_items_body .delete-ticket-item');
+            for(var i=0;i<buttons.length;i++){
+                if(!$(buttons[i]).binded && !$(buttons[i]).hasClassName('disabled')){
+                    $(buttons[i]).binded = true;
+                    Event.observe(buttons[i], 'click', this.remove.bind(this));
+                }
+            }
+        }
+    }
+
+    ticketItems.bindRemoveButtons();
+
+    if($('add_ticket_item')) {
+        Event.observe('add_ticket_item', 'click', ticketItems.add.bind(ticketItems));
+    }
+
+    <?php foreach ($this->getTicketData() as $ticket): ?>
+        ticketItems.add(<?php echo $ticket->toJson()?>);
+    <?php endforeach; ?>
+
+    //]]>
+    </script>
+-->
+</div>
