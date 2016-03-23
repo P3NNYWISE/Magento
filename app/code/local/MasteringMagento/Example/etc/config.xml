@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>5.1.0</version>
+            <version>5.2.0</version>
         </MasteringMagento_Example>
     </modules>
     <global>
