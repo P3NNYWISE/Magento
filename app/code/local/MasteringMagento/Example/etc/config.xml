@@ -19,14 +19,17 @@
             <version>5.4.0</version>
         </MasteringMagento_Example>
     </modules>
+    <!-- Configuracion Global-->
     <global>
         <models>
+            <!-- Indica Carpeta raiz de los blocks del modulo-->
             <example>
                 <class>MasteringMagento_Example_Model</class>
                 <resourceModel>example_resource</resourceModel>
             </example>
             <example_resource>
                 <class>MasteringMagento_Example_Model_Resource</class>
+                <!-- Tablas -->
                 <entities>
                     <event>
                         <table>example_event</table>
@@ -45,16 +48,20 @@
                 </setup>
             </example_setup>
         </resources>
+
+        <!-- Indica Carpeta raiz de los blocks del modulo-->
         <blocks>
             <example>
                 <class>MasteringMagento_Example_Block</class>
             </example>
         </blocks>
+        <!-- Indica Carpeta raiz de los Helper del modulo-->
         <helpers>
             <example>
                 <class>MasteringMagento_Example_Helper</class>
             </example>
         </helpers>
+        <!-- Modulo catalogo -->
         <catalog>
             <product>
                 <type>

@@ -63,4 +63,9 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
 
         return $this;
     }
+    public function hasOptions($product = null)
+    {
+        return true;
+    }
+
 }

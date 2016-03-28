@@ -15,6 +15,6 @@ class MasteringMagento_Example_IndexController extends Mage_Core_Controller_Fron
     public function indexAction()
     {
         $this->loadLayout();
-        $this->renderLayout();
+        return $this->renderLayout();
     }
 }

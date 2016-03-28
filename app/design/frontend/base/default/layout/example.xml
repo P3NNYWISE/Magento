@@ -14,8 +14,6 @@
  */
 -->
 <layout version="0.1.0">
-
-
     <PRODUCT_TYPE_event translate="label" module="example">
         <label>Catalog Product View (Event)</label>
         <reference name="product.info">
@@ -31,4 +29,4 @@
             <action method="insert"><block>product.info.event.options</block></action>
         </reference>
     </PRODUCT_TYPE_event>
-    </layout>
+   </layout>

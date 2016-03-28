@@ -1,0 +1,56 @@
+<?php
+/**
+ * app/design/frontend/base/default/template/example/catalog/product/event/options.phtml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+?>
+<?php $_product = $this->getProduct() ?>
+
+<dl class="product-event-ticket-list">
+<?php foreach ($this->getTicketData() as $ticket) : ?>
+    <dt><label><?php echo $ticket->getTitle() ?></label><span class="price-notice">$<?php echo $ticket->getPrice() ?></span></dt>
+    <dd>Qty: <input class="input-text qty event-ticket-qty" data-price="<?php echo $ticket->getPrice() ?>" name="ticket[<?php echo $ticket->getTicketId() ?>][qty]" type="text" /></dd>
+<?php endforeach; ?>
+</dl>
+
+<script type="text/javascript">
+//<![CDATA[
+    Product.Event = Class.create();
+    Product.Event.prototype = {
+        initialize : function() {
+            document.observe("dom:loaded", this.reloadPrice.bind(this));
+            document.observe("dom:loaded", this.bindListeners.bind(this));
+        },
+        bindListeners : function() {
+            var self = this;
+            $$('.product-event-ticket-list .qty').each(function(elm) {
+                elm.observe('change', self.reloadPrice.bind(self));
+            })
+        },
+        reloadPrice : function() {
+            var price = 0;
+            $$('.product-event-ticket-list .qty').each(function(elm) {
+                price += parseFloat(elm.value * elm.getAttribute('data-price'));
+            })
+            try {
+                var _displayZeroPrice = optionsPrice.displayZeroPrice;
+                optionsPrice.displayZeroPrice = false;
+                optionsPrice.changePrice('event', price);
+                optionsPrice.reload();
+                optionsPrice.displayZeroPrice = _displayZeroPrice;
+            } catch (e) {
+
+            }
+        }
+    };
+
+    pConfig = new Product.Event();
+//]]>
+</script>
