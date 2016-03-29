@@ -303,6 +303,8 @@
                     </checkout_type_multishipping_create_orders_single>
                 </observers>
             </checkout_type_multishipping_create_orders_single>
+
+            <!-- desabilitar guest checkout-->
             <checkout_allow_guest>
                 <observers>
                     <checkout_allow_guest>

@@ -9,9 +9,29 @@
  * @category  MasteringMagento
  * @package   Example
  * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+
+
+
+
+
+
+ 
  */
 class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Model_Product_Type_Abstract
 {
+
+    public function processBuyRequest($product , $buyRequest)
+    {
+            $options = array();
+            if ($tickets = $buyRequest->getTickets()){
+                $options['ticket']=  $tickets ;
+
+            }
+            return $options;
+
+    }
+
+
 
      public function getTickets($product = null)
     {
@@ -69,3 +89,33 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
     }
 
 }
+    public function _prepareOptions(Varien_Object $buyRequest, $product, $processMode)
+    {
+        $product = $this->getProduct($product);
+        $isStrictProcessMode = $this->_isStrictProcessMode($processMode);
+
+        // Run the parent method to start
+        $_options = parent::_prepareOptions($buyRequest, $product, $processMode);
+
+        // Add ticket information to additional options for Magento to display
+        $additionalOptions = array();
+        if ( $tickets = $buyRequest->getTicket() ) {
+            foreach ( $tickets as $ticketId => $data ) {
+                $_ticket = Mage::getModel('example/event_ticket')->load($ticketId);
+                if ( !$_ticket->getId() ) {
+                    $message = Mage::helper('example')->__('Ticket does not exist!');
+                    Mage::throwException($message);
+                }
+
+                // Add the ticket information to the additional options array
+                $additionalOptions[] = array(
+                    'label' => $_ticket->getTitle(),
+                    'value' => Mage::helper('example')->__('Qty: %s', $data['qty'])
+                );
+            }
+        }
+        $product->addCustomOption('additional_options', serialize($additionalOptions));
+
+        // Return the options
+        return $_options;
+    }
