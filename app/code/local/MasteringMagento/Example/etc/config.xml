@@ -16,17 +16,18 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>5.4.0</version>
+            <version>6.1.0</version>
         </MasteringMagento_Example>
     </modules>
     <!-- Configuracion Global-->
     <global>
         <models>
-            <!-- Indica Carpeta raiz de los blocks del modulo-->
+            <!-- Indica Carpeta raiz de los models del modulo -->
             <example>
                 <class>MasteringMagento_Example_Model</class>
                 <resourceModel>example_resource</resourceModel>
             </example>
+            
             <example_resource>
                 <class>MasteringMagento_Example_Model_Resource</class>
                 <!-- Tablas -->
@@ -39,6 +40,7 @@
                     </event_registrant>
                 </entities>
             </example_resource>
+
         </models>
         <resources>
             <example_setup>
@@ -88,13 +90,29 @@
                 </type>
             </product>
         </catalog>
-    </global>
 
-        <adminhtml>
+        <event>
+                <catalog_product_get_final_price>
+                    <observer>
+                        <example_event>
+                            <class> example/observer_catalog_product</class>
+                            <method> getFinalPrice </method>
+                        </example_event>
+                    </observer>
+                </catalog_product_get_final_price>
+        </event>
+        
+
+    </global>
+    <adminhtml>
         <layout>
             <updates>
                 <example>
                     <file>example.xml</file>
+                </example>
+            </updates>            
+
+
                 </example>
             </updates>
             
@@ -112,6 +130,8 @@
             </adminhtml>
         </routers>
     </admin>
+
+    <!-- rutas -->
     <frontend>
         <routers>
             <example>
