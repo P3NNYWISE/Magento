@@ -161,4 +161,18 @@
             </updates>
         </layout>
     </frontend>
+
+    <default>
+        <payment>
+            <inperson>
+                <active>1</active>
+                <model>example/payment_method_inperson</model>
+                <order_status>pending</order_status>
+                <title>Pay In Person</title>
+                <allowspecific>0</allowspecific>
+                <group>online</group>
+            </inperson>
+        </payment>
+    </default>
+    
 </config>
