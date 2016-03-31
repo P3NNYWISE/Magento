@@ -148,11 +148,18 @@
         Event.observe('add_ticket_item', 'click', ticketItems.add.bind(ticketItems));
     
     }
-    
+
+  
+        <?php foreach ($this->getTicketData() as $ticket): ?>
+        ticketItems.add(<?php echo $ticket->toJson()?>);
+    <?php endforeach; ?>
+
+
 
     //]]>
-    </script>
 
+    </script>
+  
 
 </div>
 

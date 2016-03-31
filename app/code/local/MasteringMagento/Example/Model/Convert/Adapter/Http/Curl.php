@@ -23,19 +23,14 @@ class MasteringMagento_Example_Model_Convert_Adapter_Http_Curl extends Mage_Data
     public function load()
     {
         parent::load();
-        die($data);
-        // TODO follow along with the video!
-        //Fix so that  Csv parser will work
-        if ($data = $this->getData()){
 
-                $batchModel = $this->getBatchModel();
-                $batchIoAdapter = $this->getBatchModel()->getIoAdapter();
-                $batchIoAdapter->open(true); // true for write
-                $batchIoAdapter->write($data);
-                $batchIoAdapter->close();
-
+        if ( $data = $this->getData() ) {
+            $batchModel = $this->getBatchModel();
+            $batchIoAdapter = $this->getBatchModel()->getIoAdapter();
+            $batchIoAdapter->open(true); // true for write
+            $batchIoAdapter->write($data);
+            $batchIoAdapter->close();
         }
-
     }
 
     /**
@@ -49,6 +44,7 @@ class MasteringMagento_Example_Model_Convert_Adapter_Http_Curl extends Mage_Data
         if (is_null($this->_batch)) {
             $this->_batch = Mage::getSingleton('dataflow/batch');
         }
+      
         return $this->_batch;
     }
 }

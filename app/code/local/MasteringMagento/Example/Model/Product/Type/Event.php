@@ -40,9 +40,12 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
             ->addFieldToFilter('event_id', $product->getEventId())
             ->addFieldToFilter('product_id', $product->getId())
             ->setOrder('sort_order', 'asc');
-
+        
         return $collection;
     }
+
+
+
 
     /**
      * Save Product event information
@@ -50,6 +53,7 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
      * @param Mage_Catalog_Model_Product $product
      * @return MasteringMagento_Example_Model_Product_Type_Event
      */
+
     public function save($product = null)
     {
         parent::save($product);
@@ -88,7 +92,7 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
         return true;
     }
 
-}
+
     public function _prepareOptions(Varien_Object $buyRequest, $product, $processMode)
     {
         $product = $this->getProduct($product);
@@ -119,3 +123,4 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
         // Return the options
         return $_options;
     }
+}

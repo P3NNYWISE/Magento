@@ -100,20 +100,23 @@ class MasteringMagento_Example_Block_Adminhtml_Catalog_Product_Edit_Tab_Event
     {
         $ticketArr = array();
 
+ 
+     
 
         $tickets = $this->getProduct()->getTypeInstance(true)->getTickets($this->getProduct());
+       
         foreach ($tickets as $ticket) {
             $tmpTicketItem = array(
                 'ticket_id' => $ticket->getId(),
                 'title' => $this->escapeHtml($ticket->getTitle()),
-                'price' => $this->getPriceValue($ticket->getPrice()),#getCanReadPrice(), 
+                'price' =>  $this->getPriceValue($ticket->getPrice()), 
                 'sort_order' => $ticket->getSortOrder(),
             );
             $ticketArr[] = new Varien_Object($tmpTicketItem);
-            
+  
+               
         }
-
-
+       #return $tickets;
         return $ticketArr;
     }
 

@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>6.1.0</version>
+            <version>5.4.0</version>
         </MasteringMagento_Example>
     </modules>
     <!-- Configuracion Global-->
@@ -38,6 +38,13 @@
                     <event_registrant>
                         <table>example_event_registrant</table>
                     </event_registrant>
+                    <event_ticket>
+                        <table>example_event_ticket</table>
+                    </event_ticket>
+
+
+
+
                 </entities>
             </example_resource>
 
@@ -91,29 +98,30 @@
             </product>
         </catalog>
 
-        <event>
-                <catalog_product_get_final_price>
-                    <observer>
-                        <example_event>
-                            <class> example/observer_catalog_product</class>
-                            <method> getFinalPrice </method>
-                        </example_event>
-                    </observer>
-                </catalog_product_get_final_price>
 
-    <checkout_allow_guest>
-        <observers>
+
+
+        <events>
+            <catalog_product_get_final_price>
+                <observers>
+                    <example_event>
+                        <class>example/observer_catalog_product</class>
+                        <method>getFinalPrice</method>
+                    </example_event>
+                </observers>
+            </catalog_product_get_final_price>
             <checkout_allow_guest>
-                <class>example/observer_checkout</class>
-                <method>isAllowedGuest</method>
+                <observers>
+                    <checkout_allow_guest>
+                        <class>example/observer_checkout</class>
+                        <method>isAllowedGuest</method>
+                    </checkout_allow_guest>
+                </observers>
             </checkout_allow_guest>
-        </observers>
-    </checkout_allow_guest>
-
-
-
+        </events>
                 
-        </event>
+ 
+
         
 
     </global>

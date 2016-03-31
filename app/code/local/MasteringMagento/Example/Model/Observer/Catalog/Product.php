@@ -13,8 +13,9 @@
 class MasteringMagento_Example_Model_Observer_Catalog_Product
 {
     // TODO follow along with the video!
+   
     public function getFinalPrice($observer)
-    {
+    { /**
     	$product = $observer->getEvent()->getProduct();
     	if ($buyRequest = $product->getCustomOption('info_buyRequest')){
     		$buyRequest = new Varien_Object(unserialize($buyRequest->getValue()));
@@ -28,7 +29,9 @@ class MasteringMagento_Example_Model_Observer_Catalog_Product
     		}
     		$product->setFinalPrice();
     	}
+        **/
     	return $this;
     }
+
 }
 	
