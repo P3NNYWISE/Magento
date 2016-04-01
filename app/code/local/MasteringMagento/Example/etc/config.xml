@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>6.1.0</version>
+            <version>6.6.0</version>
         </MasteringMagento_Example>
     </modules>
     <!-- Configuracion Global-->
@@ -119,6 +119,17 @@
                     </checkout_allow_guest>
                 </observers>
             </checkout_allow_guest>
+            <sales_order_place_after>
+                <observers>
+                    <example_event>
+                        <class>example/observer_sales</class>
+                        <method>salesOrderPlaceAfter</method>
+                    </example_event>
+                </observers>
+            </sales_order_place_after>
+
+
+
         </events>
                 
  
@@ -161,6 +172,17 @@
                     <module>MasteringMagento_Example</module>
                 </args>
             </example>
+            <checkout>
+                <args>
+                    <modules>
+                        <example after="Mage_Checkout">MasteringMagento_Example_Checkout</example>
+                    </modules>
+                </args>
+            </checkout>
+
+
+
+
         </routers>
         <layout>
             <updates>

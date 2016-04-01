@@ -131,4 +131,20 @@ Muestra las etiquetas Qty / cantidad en el carrito
         // Return the options
         return $_options;
     }
+
+    public function getOrderOptions($product = null)
+    {
+        $optionArr = parent::getOrderOptions($product);
+        $buyRequest = $optionArr['info_buyRequest'];
+
+        // Preserve additional options from the quote
+        if ( ! isset($optionArr['additional_options']) ) {
+            $additionalOptions = $this->getProduct($product)->getCustomOption('additional_options');
+
+            $optionArr['additional_options'] = $additionalOptions ? unserialize($additionalOptions->getValue()) : array();
+        }
+
+        return $optionArr;
+    }
+    
 }
