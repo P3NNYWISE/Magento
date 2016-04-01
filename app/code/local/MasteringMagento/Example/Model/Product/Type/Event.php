@@ -19,11 +19,13 @@
  */
 class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Model_Product_Type_Abstract
 {
-
+    /*
+        precarga la cantidad de tickets comprados
+    */    
     public function processBuyRequest($product , $buyRequest)
     {
             $options = array();
-            if ($tickets = $buyRequest->getTickets()){
+            if ($tickets = $buyRequest->getTicket()){
                 $options['ticket']=  $tickets ;
 
             }
@@ -87,11 +89,17 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
 
         return $this;
     }
+
+    /**
+        Determines
+    **/
     public function hasOptions($product = null)
     {
         return true;
     }
-
+/*
+Muestra las etiquetas Qty / cantidad en el carrito
+*/
 
     public function _prepareOptions(Varien_Object $buyRequest, $product, $processMode)
     {
@@ -114,7 +122,7 @@ class MasteringMagento_Example_Model_Product_Type_Event extends Mage_Catalog_Mod
                 // Add the ticket information to the additional options array
                 $additionalOptions[] = array(
                     'label' => $_ticket->getTitle(),
-                    'value' => Mage::helper('example')->__('Qty: %s', $data['qty'])
+                    'value' => Mage::helper('example')->__('Cantidad: %s', $data['qty'])
                 );
             }
         }

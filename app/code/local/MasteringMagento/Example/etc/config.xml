@@ -16,7 +16,7 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>5.4.0</version>
+            <version>6.1.0</version>
         </MasteringMagento_Example>
     </modules>
     <!-- Configuracion Global-->
@@ -110,6 +110,7 @@
                     </example_event>
                 </observers>
             </catalog_product_get_final_price>
+            
             <checkout_allow_guest>
                 <observers>
                     <checkout_allow_guest>
@@ -178,7 +179,7 @@
                 <order_status>pending</order_status>
                 <title>Pay In Person</title>
                 <allowspecific>0</allowspecific>
-                <group>online</group>
+                <group>offline</group>
             </inperson>
         </payment>
     </default>

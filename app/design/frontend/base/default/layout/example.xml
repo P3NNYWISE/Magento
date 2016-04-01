@@ -14,6 +14,21 @@
  */
 -->
 <layout version="0.1.0">
+
+
+<!-- Paginas del checkout -->
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <action method="setTemplate">
+                <path>example/checkout/onepage.phtml</path>
+            </action>
+            <block type="example/checkout_onepage_event_registration" name="checkout.onepage.event_registration" as="event_registration" template="example/checkout/onepage/event/registration.phtml" />
+        </reference>
+    </checkout_onepage_index>
+
+
+    <!-- Carrito de compras
+    -->
     <PRODUCT_TYPE_event translate="label" module="example">
         <label>Catalog Product View (Event)</label>
         <reference name="product.info">

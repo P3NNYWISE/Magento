@@ -12,10 +12,10 @@
  */
 class MasteringMagento_Example_Model_Observer_Catalog_Product
 {
-    // TODO follow along with the video!
+    // Actualiza el precio final de los tickets  en carrito
    
     public function getFinalPrice($observer)
-    { /**
+    { 
     	$product = $observer->getEvent()->getProduct();
     	if ($buyRequest = $product->getCustomOption('info_buyRequest')){
     		$buyRequest = new Varien_Object(unserialize($buyRequest->getValue()));
@@ -24,13 +24,14 @@ class MasteringMagento_Example_Model_Observer_Catalog_Product
     			foreach ($tickets as $ticketId => $data) {
     				$_ticket = Mage::getModel('example/event_ticket')->load($ticketId);
     				$price += $data['qty'] * $_ticket->getPrice();
-    				# code...
+    				
     			}
     		}
-    		$product->setFinalPrice();
+    		$product->setFinalPrice($price);
     	}
-        **/
+        
     	return $this;
+    
     }
 
 }
