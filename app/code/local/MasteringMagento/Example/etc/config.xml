@@ -172,18 +172,26 @@
                     <module>MasteringMagento_Example</module>
                 </args>
             </example>
-            <checkout>
-                <args>
-                    <modules>
-                        <example after="Mage_Checkout">MasteringMagento_Example_Checkout</example>
-                    </modules>
-                </args>
-            </checkout>
+
+              <checkout>
+                    <args>
+                        <modules>
+                            <example after="Mage_Checkout">MasteringMagento_Example_Checkout</example>
+                        </modules>
+                    </args>
+                </checkout>
+
+
+
 
 
 
 
         </routers>
+
+
+    
+
         <layout>
             <updates>
                 <example>
