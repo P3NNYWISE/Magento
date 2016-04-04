@@ -35,7 +35,6 @@ class MasteringMagento_Example_Model_Convert_Adapter_Sales_Order extends Mage_Da
     {
         // TODO follow along with the video! 7.4
 // Create a sales_quote
-
     
     $quote = Mage::getModel('sales/quote')
         ->setStoreId($this->getBatchParams('store'))
@@ -56,7 +55,7 @@ class MasteringMagento_Example_Model_Convert_Adapter_Sales_Order extends Mage_Da
         ->setStreet($importData['shipping_street'])
         ->setCity($importData['shipping_city'])
         ->setRegion($importData['shipping_region'])
-        ->setCountry($importData['shipping_country'])
+        ->setCountryId($importData['shipping_country'])
         ->setPostcode($importData['shipping_postcode'])
         ->setTelephone($importData['shipping_telephone'])
         ->setShippingMethod('flatrate_flatrate')
@@ -72,19 +71,22 @@ class MasteringMagento_Example_Model_Convert_Adapter_Sales_Order extends Mage_Da
         ->setStreet($importData['shipping_street'])
         ->setCity($importData['shipping_city'])
         ->setRegion($importData['shipping_region'])
-        ->setCountry($importData['shipping_country'])
+        ->setCountryId($importData['shipping_country'])
         ->setPostcode($importData['shipping_postcode'])
         ->setTelephone($importData['shipping_telephone']);
 
-    // Add the payment method
-    //$this->getPayment()->setMethod('inperson');
-
+    // Add the payment method   cashondelivery
+    Mage::log("inicio payment");
+    $quote->getPayment()->setMethod('inperson');
+       
+    #$quote->getPayment()->setMethod('cashondelivery');
     // Save the quote in the database
-   // $quote->save()->collectTotals();
- 
+    Mage::log("fin-pay"); 
+    $quote->save()->collectTotals();
+
     // Create a service object to convert the quote into an order
-    //$service = Mage::getModel('sales/service_quote', $quote);
-    //$service->submitAll();
+    $service = Mage::getModel('sales/service_quote', $quote);
+    $service->submitAll();
 
     // The order that was created
     $order = $service->getOrder();
