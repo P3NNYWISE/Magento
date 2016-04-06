@@ -14,14 +14,34 @@
  */
 -->
 <layout version="0.1.0">
-    <example_index_index>
-    	
-        <update handle="page_two_columns_right" />
-        <reference name ="content">
-        	<block 	type="core/template" template="example/welcome.phtml" />
 
+
+<!-- Paginas del checkout -->
+    <checkout_onepage_index>
+        <reference name="checkout.onepage">
+            <action method="setTemplate">
+                <path>example/checkout/onepage.phtml</path>
+            </action>
+            <block type="example/checkout_onepage_event_registration" name="checkout.onepage.event_registration" as="event_registration" template="example/checkout/onepage/event/registration.phtml" />
         </reference>
+    </checkout_onepage_index>
 
 
-    </example_index_index>
-</layout>
+    <!-- Carrito de compras
+    -->
+    <PRODUCT_TYPE_event translate="label" module="example">
+        <label>Catalog Product View (Event)</label>
+        <reference name="product.info">
+            <reference name="product.info.addtocart">
+                <action method="setTemplate">
+                    <path>example/catalog/product/view/addtocart.phtml</path>
+                </action>
+            </reference>
+            <block type="catalog/product_view_type_virtual" name="product.info.event" as="product_type_data" template="catalog/product/view/type/default.phtml" />
+        </reference>
+        <reference name="product.info.options.wrapper">
+            <block type="example/catalog_product_event_options" name="product.info.event.options" as="type_event_options" before="-" template="example/catalog/product/event/options.phtml"/>
+            <action method="insert"><block>product.info.event.options</block></action>
+        </reference>
+    </PRODUCT_TYPE_event>
+   </layout>

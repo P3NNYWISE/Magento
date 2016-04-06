@@ -1,0 +1,66 @@
+<?php
+/**
+ * app/design/frontend/base/default/template/example/checkout/onepage/event/registration.phtml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+?>
+<form action="" id="co-event-form">
+    <p><?php echo $this->__('Before you can checkout, you must tell us who is going to the event.') ?></p>
+    <?php $i = 0; foreach ( $this->getEvents() as $item ): ?>
+        <?php if ( $tickets = $item->getBuyRequest()->getTicket() ) : ?>
+            <?php foreach ( $tickets as $id => $info ) : ?>
+            <?php $ticket = Mage::getModel('example/event_ticket')->load($id); ?>
+            <?php for ( $qty = 0; $qty < $info['qty']; $qty++ ) : ?>
+    <div class="info-set">
+        <h2 class="legend"><?php echo $this->__('%s: %s (Ticket #%s)', $item->getName(), $ticket->getTitle(), $qty+1) ?></h2>
+        <fieldset>
+            <input type="hidden" name="ticket[<?php echo $i ?>][item_id]" value="<?php echo $item->getId() ?>" id="registrant:item_id" />
+            <input type="hidden" name="ticket[<?php echo $i ?>][ticket_id]" value="<?php echo $ticket->getId() ?>" id="registrant:ticket_id" />
+            <input type="hidden" name="ticket[<?php echo $i ?>][event_id]" value="<?php echo $ticket->getEventId() ?>" id="registrant:event_id" />
+            <ul class="form-list" id="event-attendee-form-<?php echo $i ?>">
+                <li class="fields">
+                    <label for="registrant:name"><?php echo $this->__('Name') ?></label>
+                    <div class="input-box">
+                        <input type="text" id="registrant:name" name="ticket[<?php echo $i ?>][fullname]" value="<?php echo $this->escapeHtml($this->getRegistrant()->getName()) ?>" title="<?php echo $this->__('Name') ?>" class="input-text" />
+                    </div>
+                </li>
+                <li class="fields">
+                    <label for="registrant:company"><?php echo $this->__('Company') ?></label>
+                    <div class="input-box">
+                        <input type="text" id="registrant:company" name="ticket[<?php echo $i ?>][company]" value="<?php echo $this->escapeHtml($this->getRegistrant()->getCompany()) ?>" title="<?php echo $this->__('Company') ?>" class="input-text" />
+                    </div>
+                </li>
+                <li class="fields">
+                    <label for="registrant:email"><?php echo $this->__('Email') ?></label>
+                    <div class="input-box">
+                        <input type="text" id="registrant:email" name="ticket[<?php echo $i ?>][email]" value="<?php echo $this->escapeHtml($this->getRegistrant()->getEmail()) ?>" title="<?php echo $this->__('Email') ?>" class="input-text" />
+                    </div>
+                </li>
+            </ul>
+        </fieldset>
+    </div>
+            <?php $i++; // increment index for POST array ?>
+            <?php endfor; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    <?php endforeach; ?>
+    <div class="buttons-set" id="event-buttons-container">
+        <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+        <button type="button" class="button" title="<?php echo $this->__('Continue') ?>" onclick="registration.save()"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+        <span id="event-please-wait" class="please-wait" style="display:none;">
+            <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
+        </span>
+    </div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var registration = new EventRegistration('co-event-form', '<?php echo $this->getUrl('checkout/onepage/saveEvent') ?>');
+    var registrationForm = new VarienForm('co-event-form');
+//]]>
+</script>

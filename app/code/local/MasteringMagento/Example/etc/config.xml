@@ -16,81 +16,140 @@
 <config>
     <modules>
         <MasteringMagento_Example>
-            <version>0.0.1</version>
+            <version>6.6.0</version>
         </MasteringMagento_Example>
     </modules>
+    <!-- Configuracion Global-->
     <global>
-
-<!-- Sin models
-
         <models>
+            <!-- Indica Carpeta raiz de los models del modulo -->
             <example>
                 <class>MasteringMagento_Example_Model</class>
+                <resourceModel>example_resource</resourceModel>
             </example>
+            
+            <example_resource>
+                <class>MasteringMagento_Example_Model_Resource</class>
+                <!-- Tablas -->
+                <entities>
+                    <event>
+                        <table>example_event</table>
+                    </event>
+                    <event_registrant>
+                        <table>example_event_registrant</table>
+                    </event_registrant>
+                    <event_ticket>
+                        <table>example_event_ticket</table>
+                    </event_ticket>
+
+
+
+
+                </entities>
+            </example_resource>
+
         </models>
--->
-
-    <models>
-        <example>
-            <class>MasteringMagento_Example_Model</class>
-            <resourceModel>example_resource</resourceModel>
-        </example>
-        <example_resource>
-            <class>MasteringMagento_Example_Model_Resource</class>
-            <entities>
-                <event>
-                    <table>example_event</table>
-                </event>
-                <event_registrant>
-                    <table>example_event_registrant</table>
-                </event_registrant>
-            </entities>
-        </example_resource>
-    </models>
-    <!-- automatic script - db instalacion-->
         <resources>
-        <example_setup>
-            <setup>
-                <module>MasteringMagento_Example</module>
-                <class>Mage_Core_Model_Resource_Setup</class>
-            </setup>
-        </example_setup>
-    </resources>
+            <example_setup>
+                <setup>
+                    <module>MasteringMagento_Example</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </example_setup>
+        </resources>
 
-
-
-
-
+        <!-- Indica Carpeta raiz de los blocks del modulo-->
         <blocks>
             <example>
                 <class>MasteringMagento_Example_Block</class>
             </example>
         </blocks>
+        <!-- Indica Carpeta raiz de los Helper del modulo-->
         <helpers>
             <example>
                 <class>MasteringMagento_Example_Helper</class>
             </example>
         </helpers>
+        <!-- Modulo catalogo -->
+        <catalog>
+            <product>
+                <type>
+                    <event translate="label" module="example">
+                        <label>Event Registration</label>
+                        <model>example/product_type_event</model>
+                        <composite>0</composite>
+                    </event>
+                    <grouped>
+                        <allow_product_types>
+                            <event />
+                        </allow_product_types>
+                    </grouped>
+                    <configurable>
+                        <allow_product_types>
+                            <event />
+                        </allow_product_types>
+                    </configurable>
+                    <bundle>
+                        <allow_product_types>
+                            <event />
+                        </allow_product_types>
+                    </bundle>
+                </type>
+            </product>
+        </catalog>
 
-<!-- Event Handling video 3.5 -->
-    <events>
-        <controller_action_predispatch>
-            <observers>
-                <example_observer>
-                    <class>example/observer</class>
-                    <method>controllerActionPredispatch</method>
-                </example_observer>
-            </observers>
-        </controller_action_predispatch>
-    </events>
 
 
 
+        <events>
+            <catalog_product_get_final_price>
+                <observers>
+                    <example_event>
+                        <class>example/observer_catalog_product</class>
+                        <method>getFinalPrice</method>
+                    </example_event>
+                </observers>
+            </catalog_product_get_final_price>
+            
+            <checkout_allow_guest>
+                <observers>
+                    <checkout_allow_guest>
+                        <class>example/observer_checkout</class>
+                        <method>isAllowedGuest</method>
+                    </checkout_allow_guest>
+                </observers>
+            </checkout_allow_guest>
+            <sales_order_place_after>
+                <observers>
+                    <example_event>
+                        <class>example/observer_sales</class>
+                        <method>salesOrderPlaceAfter</method>
+                    </example_event>
+                </observers>
+            </sales_order_place_after>
 
 
 
+        </events>
+                
+ 
+
+        
 
     </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <example>
+                    <file>example.xml</file>
+       
+
+                </example>
+            </updates>
+            
+        </layout>
+        
+    </adminhtml>
     <admin>
         <routers>
             <adminhtml>
@@ -103,22 +162,35 @@
         </routers>
     </admin>
 
-
-    
-
+    <!-- rutas -->
     <frontend>
         <routers>
             <example>
                 <use>standard</use>
                 <args>
                     <frontName>example</frontName>
-                    <!-- magento.local/example/*   routing  -->
                     <module>MasteringMagento_Example</module>
-                    <!-- modulo en lowercase -->
                 </args>
             </example>
+
+              <checkout>
+                    <args>
+                        <modules>
+                            <example after="Mage_Checkout">MasteringMagento_Example_Checkout</example>
+                        </modules>
+                    </args>
+                </checkout>
+
+
+
+
+
+
+
         </routers>
 
+
+    
 
         <layout>
             <updates>
@@ -129,5 +201,17 @@
         </layout>
     </frontend>
 
-
+    <default>
+        <payment>
+            <inperson>
+                <active>1</active>
+                <model>example/payment_method_inperson</model>
+                <order_status>pending</order_status>
+                <title>Pay In Person</title>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+            </inperson>
+        </payment>
+    </default>
+    
 </config>

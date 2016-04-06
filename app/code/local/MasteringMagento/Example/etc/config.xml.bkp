@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+/**
+ * app/code/local/MasteringMagento/Example/etc/config.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<config>
+    <modules>
+        <MasteringMagento_Example>
+            <version>0.0.1</version>
+        </MasteringMagento_Example>
+    </modules>
+    <global>
+
+<!-- Sin models
+
+        <models>
+            <example>
+                <class>MasteringMagento_Example_Model</class>
+            </example>
+        </models>
+-->
+
+    <models>
+        <example>
+            <class>MasteringMagento_Example_Model</class>
+            <resourceModel>example_resource</resourceModel>
+        </example>
+        <example_resource>
+            <class>MasteringMagento_Example_Model_Resource</class>
+            <entities>
+                <event>
+                    <table>example_event</table>
+                </event>
+                <event_registrant>
+                    <table>example_event_registrant</table>
+                </event_registrant>
+            </entities>
+        </example_resource>
+    </models>
+    <!-- automatic script - db instalacion-->
+        <resources>
+        <example_setup>
+            <setup>
+                <module>MasteringMagento_Example</module>
+                <class>Mage_Core_Model_Resource_Setup</class>
+            </setup>
+        </example_setup>
+    </resources>
+
+
+
+
+
+        <blocks>
+            <example>
+                <class>MasteringMagento_Example_Block</class>
+            </example>
+        </blocks>
+        <helpers>
+            <example>
+                <class>MasteringMagento_Example_Helper</class>
+            </example>
+        </helpers>
+
+
+
+
+
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <example before="Mage_Adminhtml">MasteringMagento_Example_Adminhtml</example>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+
+    
+
+    <frontend>
+        <routers>
+            <example>
+                <use>standard</use>
+                <args>
+                    <frontName>example</frontName>
+                    <!-- magento.local/example/*   routing  -->
+                    <module>MasteringMagento_Example</module>
+                    <!-- modulo en lowercase -->
+                </args>
+            </example>
+        </routers>
+
+
+        <layout>
+            <updates>
+                <example>
+                    <file>example.xml</file>
+                </example>
+            </updates>
+        </layout>
+    </frontend>
+
+
+</config>
