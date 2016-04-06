@@ -1,0 +1,876 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"max",
+				"maxlength	Attr"
+			],
+			[
+				"event",
+				"eventData"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"addi",
+				"additionalTable"
+			],
+			[
+				"add",
+				"additionalTable"
+			],
+			[
+				"getM",
+				"getMessage"
+			],
+			[
+				"even",
+				"eventIds"
+			],
+			[
+				"eve",
+				"eventId"
+			],
+			[
+				"eventId",
+				"eventId"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 2360,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Mage.php",
+			"settings":
+			{
+				"buffer_size": 27972,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/code/core/Mage/Core/Model/Translate.php",
+			"settings":
+			{
+				"buffer_size": 16024,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/code/core/Mage/Core/Model/Layout.php",
+			"settings":
+			{
+				"buffer_size": 19169,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "$_COOKIE = array[2]\n	$_COOKIE['XDEBUG_SESSION'] = (string) sublime.xdebug\n	$_COOKIE['frontend'] = (string) odrfi62tp657lhqmig3ioo5fv4\n$_ENV = array[0]\n$_FILES = array[0]\n$_GET = array[1]\n	$_GET['XDEBUG_SESSION_START'] = (string) sublime.xdebug\n$_POST = array[0]\n$_REQUEST = array[1]\n	$_REQUEST['XDEBUG_SESSION_START'] = (string) sublime.xdebug\n$_SERVER = array[37]\n	$_SERVER['USER'] = (string) www-data\n	$_SERVER['HOME'] = (string) /var/www\n	$_SERVER['FCGI_ROLE'] = (string) RESPONDER\n	$_SERVER['SCRIPT_FILENAME'] = (string) /var/www/magento/index.php\n	$_SERVER['MAGE_IS_DEVELOPER_MODE'] = (string) on\n	$_SERVER['MAGE_RUN_CODE'] = <string>\n	$_SERVER['MAGE_RUN_TYPE'] = (string) store\n	$_SERVER['PHP_VALUE'] = (string) error_log=/var/www/magento/var/log/php_errors.log\n	$_SERVER['QUERY_STRING'] = (string) XDEBUG_SESSION_START=sublime.xdebug\n	$_SERVER['REQUEST_METHOD'] = (string) GET\n	$_SERVER['CONTENT_TYPE'] = <string>\n	$_SERVER['CONTENT_LENGTH'] = <string>\n	$_SERVER['SCRIPT_NAME'] = (string) /index.php\n	$_SERVER['REQUEST_URI'] = (string) /?XDEBUG_SESSION_START=sublime.xdebug\n	$_SERVER['DOCUMENT_URI'] = (string) /index.php\n	$_SERVER['DOCUMENT_ROOT'] = (string) /var/www/magento\n	$_SERVER['SERVER_PROTOCOL'] = (string) HTTP/1.1\n	$_SERVER['GATEWAY_INTERFACE'] = (string) CGI/1.1\n	$_SERVER['SERVER_SOFTWARE'] = (string) nginx/1.4.6\n	$_SERVER['REMOTE_ADDR'] = (string) 127.0.0.1\n	$_SERVER['REMOTE_PORT'] = (string) 48276\n	$_SERVER['SERVER_ADDR'] = (string) 127.0.0.1\n	$_SERVER['SERVER_PORT'] = (string) 80\n	$_SERVER['SERVER_NAME'] = (string) magento.local\n	$_SERVER['REDIRECT_STATUS'] = (string) 200\n	$_SERVER['HTTP_HOST'] = (string) magento.local\n	$_SERVER['HTTP_CONNECTION'] = (string) keep-alive\n	$_SERVER['HTTP_CACHE_CONTROL'] = (string) max-age=0\n	$_SERVER['HTTP_ACCEPT'] = (string) text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\n	$_SERVER['HTTP_UPGRADE_INSECURE_REQUESTS'] = (string) 1\n	$_SERVER['HTTP_USER_AGENT'] = (string) Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/49.0.2623.108 Chrome/49.0.2623.108 Safari/537.36\n	$_SERVER['HTTP_ACCEPT_ENCODING'] = (string) gzip, deflate, sdch\n	...\n$_SESSION = array[7]\n	$_SESSION['core'] = array[5]\n		...\n	$_SESSION['customer_base'] = array[3]\n		...\n	$_SESSION['checkout'] = array[2]\n		...\n	$_SESSION['catalog'] = array[2]\n		...\n	$_SESSION['store_default'] = array[1]\n		...\n	$_SESSION['store_french'] = array[1]\n		...\n	$_SESSION['store_german'] = array[1]\n		...\n$args = array[0]\n$code = (string) Mage_Catalog::Site Map\n$module = (string) Mage_Catalog\n$result = <uninitialized>\n$text = (string) Site Map\n$translated = (string) Site Map\n$this = Mage_Core_Model_Translate[9]\n	$this->_locale = (string) en_US\n	$this->_translate = <null>\n	$this->_config = array[5]\n		...\n	$this->_useCache = (bool) 1\n	$this->_cacheId = (string) translate_en_US_frontend_1_rwd_default\n	$this->_data = array[0]\n	$this->_dataScope = <null>\n	$this->_translateInline = (bool) 0\n	$this->_canUseInline = (bool) 1\n",
+			"settings":
+			{
+				"buffer_size": 3002,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "[0] file:///var/www/magento/app/code/core/Mage/Core/Model/Translate.php.Mage_Core_Model_Translate->translate:416\n[1] file:///var/www/magento/app/code/core/Mage/Core/Helper/Abstract.php.Mage_Core_Helper_Abstract->__:186\n[2] file:///var/www/magento/app/code/core/Mage/Core/Model/Layout.php.Mage_Core_Model_Layout->_translateLayoutNode:396\n[3] file:///var/www/magento/app/code/core/Mage/Core/Model/Layout.php.Mage_Core_Model_Layout->_generateAction:347\n[4] file:///var/www/magento/app/code/core/Mage/Core/Model/Layout.php.Mage_Core_Model_Layout->generateBlocks:214\n[5] file:///var/www/magento/app/code/core/Mage/Core/Model/Layout.php.Mage_Core_Model_Layout->generateBlocks:210\n[6] file:///var/www/magento/app/code/core/Mage/Core/Controller/Varien/Action.php.Mage_Core_Controller_Varien_Action->generateLayoutBlocks:344\n[7] file:///var/www/magento/app/code/core/Mage/Cms/Helper/Page.php.Mage_Cms_Helper_Page->_renderPage:113\n[8] file:///var/www/magento/app/code/core/Mage/Cms/Helper/Page.php.Mage_Cms_Helper_Page->renderPage:52\n[9] file:///var/www/magento/app/code/core/Mage/Cms/controllers/IndexController.php.Mage_Cms_IndexController->indexAction:45\n[10] file:///var/www/magento/app/code/core/Mage/Core/Controller/Varien/Action.php.Mage_Core_Controller_Varien_Action->dispatch:418\n[11] file:///var/www/magento/app/code/core/Mage/Core/Controller/Varien/Router/Standard.php.Mage_Core_Controller_Varien_Router_Standard->match:254\n[12] file:///var/www/magento/app/code/core/Mage/Core/Controller/Varien/Front.php.Mage_Core_Controller_Varien_Front->dispatch:172\n[13] file:///var/www/magento/app/code/core/Mage/Core/Model/App.php.Mage_Core_Model_App->run:365\n[14] file:///var/www/magento/app/Mage.php.Mage::run:684\n[15] file:///var/www/magento/index.php.{main}:71\n",
+			"settings":
+			{
+				"buffer_size": 1755,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "=> /var/www/magento/app/code/core/Mage/Core/Model/Translate.php\n	|+| 1\n	|+| 416\n=> /var/www/magento/index.php\n	|+| 32\n",
+			"settings":
+			{
+				"buffer_size": 118,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 159.0,
+		"last_filter": "intall",
+		"selected_items":
+		[
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"cta",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/var/www/magento",
+		"/var/www/magento/app",
+		"/var/www/magento/app/code",
+		"/var/www/magento/app/code/local",
+		"/var/www/magento/app/code/local/TestingMagento",
+		"/var/www/magento/app/code/local/TestingMagento/Holamundo",
+		"/var/www/magento/app/code/local/TestingMagento/Holamundo/controllers"
+	],
+	"file_history":
+	[
+		"/var/www/magento/lib/Varien/Object.php",
+		"/var/www/magento/app/code/core/Mage/Core/Model/Translate.php",
+		"/var/www/magento/app/Mage.php",
+		"/home/f4b10/.config/sublime-text-3/Packages/User/Xdebug.sublime-settings",
+		"/var/www/magento/magengo.sublime-project",
+		"/home/f4b10/.config/sublime-text-3/Packages/Xdebug Client/Xdebug.sublime-settings",
+		"/var/www/magento/bootstrap.php",
+		"/var/www/magento/phpinfo.php",
+		"/var/www/magento/api.php",
+		"/var/www/magento/app/code/core/Mage/Sales/Model/Order.php",
+		"/var/www/magento/app/code/core/Mage/Dataflow/Model/Convert/Parser/Csv.php",
+		"/var/www/magento/test-import.csv",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Convert/Adapter/Sales/Order.php",
+		"/var/www/magento/app/code/core/Mage/Sales/Model/Quote.php",
+		"/var/www/magento/shell/abstract.php",
+		"/var/www/magento/app/code/core/Mage/Payment/Model/Method/Cashondelivery.php",
+		"/var/www/magento/app/code/core/Mage/Dataflow/Model/Convert/Adapter/Abstract.php",
+		"/var/www/magento/app/code/core/Mage/Dataflow/Model/Convert/Container/Abstract.php",
+		"/var/www/magento/app/code/core/Mage/Dataflow/Model/Convert/Adapter/Interface.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/controllers/Checkout/OnepageController.php",
+		"/var/www/magento/skin/frontend/base/default/js/opcheckout.js",
+		"/var/www/magento/app/design/frontend/base/default/template/example/checkout/onepage.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Event/Registrant.php",
+		"/var/www/magento/app/design/frontend/base/default/template/example/checkout/onepage/event/registration.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/var/www/magento/skin/frontend/base/default/js/event.js",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Resource/Event/Registrant.php",
+		"/var/www/magento/app/code/local/TestingMagento/Holamundo/controllers/IndexController.php",
+		"/var/www/magento/app/code/core/Mage/Checkout/controllers/OnepageController.php",
+		"/var/www/seminario/Seminario/Procfile",
+		"/var/www/seminario/Seminario/runtime",
+		"/var/www/seminario/Seminario/Seminario/static/humans.txt",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-6.1.0-6.6.0.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Observer/Sales.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/controllers/Checkout/OnePageController.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Checkout/Onepage/Event/Registration.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Product/Type/Event.php",
+		"/var/www/magento/app/design/frontend/default/iphone/layout/checkout.xml",
+		"/var/www/magento/app/design/adminhtml/default/default/layout/example.xml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Helper/Checkout.php",
+		"/var/www/magento/app/design/frontend/base/default/layout/example.xml",
+		"/var/www/magento/app/design/frontend/base/default/template/example/catalog/product/event/options.phtml",
+		"/var/www/magento/app/code/core/Mage/Payment/Model/Method/Abstract.php",
+		"/var/www/magento/app/code/core/Mage/Checkout/Block/Onepage.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/etc/system.xml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Observer/Catalog/Product.php",
+		"/var/www/magento/app/code/core/Mage/Checkout/Block/Onepage/Abstract.php",
+		"/var/www/magento/app/design/adminhtml/default/default/template/example.phtml",
+		"/var/www/magento/app/code/core/Mage/Adminhtml/Model/System/Config/Source/Order/Status/Newprocessing.php",
+		"/var/www/magento/app/code/core/Mage/Catalog/Model/Product/Type/Price.php",
+		"/var/www/magento/downloader/skin/install/boxes.css",
+		"/var/www/magento/js/lib/jquery/jquery-1.10.2.js",
+		"/var/www/magento/app/design/frontend/base/default/template/example/catalog/product/view/addtocart.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Catalog/Product/Event/Options.php",
+		"/var/www/magento/app/code/core/Mage/Catalog/Model/Product.php",
+		"/var/www/magento/app/code/core/Mage/Bundle/Model/Product/Type.php",
+		"/var/www/magento/app/code/core/Mage/Catalog/Model/Product/Type/Abstract.php",
+		"/var/www/magento/app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Adminhtml/Catalog/Product/Edit/Tab/Event.php",
+		"/var/www/magento/app/design/adminhtml/default/default/template/example/product/edit/event.phtml.bkp",
+		"/var/www/magento/app/design/adminhtml/default/default/template/example/product/edit/event.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Resource/Event/Ticket/Collection.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Resource/Event/Ticket.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Adminhtml/Catalog/Product/Event/Options.php.bkp",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/Model/Product/Type/Event.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Resource/Event.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Ticket.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Event/Ticket.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.2.0-5.3.0.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.3.0-5.4.0.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.2.0-5.3.0.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 2 - Cart Item Behavior (cont.)/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.1.0-5.2.0.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.3.0-5.4.0.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 3 - Advanced Product Editing/app/code/local/MasteringMagento/Example/Block/Adminhtml/Catalog/Product/Edit/Tab/Event.php",
+		"/var/www/magento/app/code/core/Mage/Catalog/etc/config.xml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Adminhtml/Event.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Convert/Adapter/Http/Curl.php",
+		"/var/www/magento/app/code/core/Mage/Catalog/Model/Convert/Adapter/Product.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Observer/Checkout.php",
+		"/var/www/magento/app/code/local/TestingMagento/Holamundo/etc/config.xml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.3.0-5.4.0.php.bkp",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 4 - Creating A Custom Payment Method/app/code/local/MasteringMagento/Example/Model/Observer/Checkout.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 4 - Creating A Custom Payment Method/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 3 - Controlling Guest Checkout/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/var/www/magento/app/code/core/Mage/Downloadable/etc/config.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 3 - Controlling Guest Checkout/app/code/local/MasteringMagento/Example/Model/Observer/Checkout.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/controllers/IndexController.php",
+		"/home/f4b10/Descargas/orders (1).csv",
+		"/var/www/magento/app/code/core/Mage/Dataflow/Model/Convert/Adapter/Http/Curl.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 7 - Example Code/Topic 4 - Importing Orders with Dataflow/app/code/local/MasteringMagento/Example/Model/Convert/Adapter/Http/Curl.php",
+		"/home/f4b10/dumps/Magento- Dump20160328.sql",
+		"/home/f4b10/Descargas/Mastering Magento/Section 7 - Example Code/Topic 4 - Importing Orders with Dataflow/app/code/local/MasteringMagento/Example/Model/Convert/Adapter/Sales/Order.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 7 - Example Code/Topic 3 - Writing Your Own Adapter/app/code/local/MasteringMagento/Example/Helper/Checkout.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 7 - Example Code/Topic 3 - Writing Your Own Adapter/skin/frontend/base/default/js/event.js",
+		"/home/f4b10/Descargas/Mastering Magento/Section 7 - Example Code/Topic 3 - Writing Your Own Adapter/app/code/local/MasteringMagento/Example/Model/Convert/Adapter/Http/Curl.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Block/Catalog/Product/Event/Options.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Block/Adminhtml/Catalog/Product/Event/Options.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 3 - Example Code/Topic 1 - Adding a Menu Item in the Admin/app/code/local/MasteringMagento/Example/controllers/IndexController.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/controllers/Adminhtml/EventController.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/etc/modules/MasteringMagento_Example.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/design/frontend/base/default/template/example/catalog/product/event/options.phtml",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/design/frontend/base/default/template/example/catalog/product/view/addtocart.phtml",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/design/frontend/base/default/layout/example.xml",
+		"/var/www/magento/app/design/frontend/base/default/layout/oauth.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section5/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Model/Product/Type/Event.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 6 - Example Code/Topic 1 - Cart Item Behavior/app/design/frontend/base/default/layout/example.xml",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Model/Product/Type/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Model/Product/Attribute/Source/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Model/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Model/Resource/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 3 - Advanced Product Editing/app/code/local/MasteringMagento/Example/Model/Product/Type/Event.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Resource/Event/Collection.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-upgrade-5.1.0-5.2.0.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/code/local/MasteringMagento/Example/sql/example_setup/mysql4-install-0.0.1.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/code/local/MasteringMagento/Example/Block/Catalog/Product/Event/Options.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 5 - Product Renderers/app/design/adminhtml/default/default/template/example/product/edit/event.phtml",
+		"/var/www/magento/app/code/core/Mage/Adminhtml/Block/Widget/Tab/Interface.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 3 - Advanced Product Editing/app/design/adminhtml/default/default/template/example/product/edit/event.phtml",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 4 - Saving Your Product/app/design/adminhtml/default/default/template/example/product/edit/event.phtml",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/etc/config.xml.s5",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 3 - Advanced Product Editing/app/code/local/MasteringMagento/Example/etc/config.xml",
+		"/var/www/magento/app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php",
+		"/var/www/magento/app/code/local/MasteringMagento/Example/Model/Product/Attribute/Source/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 3 - Advanced Product Editing/app/code/local/MasteringMagento/Example/Block/Adminhtml/Catalog/Product/Edit/Tab/Event.php",
+		"/home/f4b10/Descargas/Mastering Magento/Section 5 - Example Code/Topic 3 - Advanced Product Editing/app/design/adminhtml/default/default/layout/example.xml"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"getCustomerName",
+			"')\n",
+			"_prepareMassaction",
+			"Mage_Core_Block_Template",
+			"E"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"E"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2360,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2344,
+								2344
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/Mage.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 27972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2056,
+								2056
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15147.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/code/core/Mage/Core/Model/Translate.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16024,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11305,
+								11354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6720.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/code/core/Mage/Core/Model/Layout.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19169,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"spell_check": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6227.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3002,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3002,
+								3002
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1755,
+								1755
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 118,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.7,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 201.0
+	},
+	"pinned_build_system": "",
+	"project": "magento.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"magemodeltra",
+				"app/code/core/Mage/Core/Model/Translate.php"
+			],
+			[
+				"appmage",
+				"app/Mage.php"
+			],
+			[
+				"shelllog",
+				"shell/log.php"
+			],
+			[
+				"quote",
+				"app/code/core/Mage/Sales/Model/Quote.php"
+			],
+			[
+				"cash",
+				"app/code/core/Mage/Payment/Model/Method/Cashondelivery.php"
+			],
+			[
+				"dataflowconvertparser",
+				"app/code/core/Mage/Dataflow/Model/Convert/Parser/Csv.php"
+			],
+			[
+				"registratio",
+				"app/design/frontend/base/default/template/example/checkout/onepage/event/registration.phtml"
+			],
+			[
+				"skinfrontendjsop",
+				"skin/frontend/base/default/js/opcheckout.js"
+			],
+			[
+				"skinfrontende",
+				"skin/frontend/base/default/js/event.js"
+			],
+			[
+				"examplecheckoutone",
+				"app/design/frontend/base/default/template/example/checkout/onepage.phtml"
+			],
+			[
+				"pisa",
+				"Seminario/templates/turnos/lista_afiliaciones.html"
+			],
+			[
+				"exampleconfig",
+				"app/code/local/MasteringMagento/Example/etc/config.xml"
+			],
+			[
+				"checkout",
+				"app/design/frontend/default/iphone/layout/checkout.xml"
+			],
+			[
+				"layoutexa",
+				"app/design/frontend/base/default/layout/example.xml"
+			],
+			[
+				"templateexa",
+				"app/design/adminhtml/default/default/template/example.phtml"
+			],
+			[
+				"magecheckoutblockone",
+				"app/code/core/Mage/Checkout/Block/Onepage.php"
+			],
+			[
+				"catalogmodelproductprice",
+				"app/code/core/Mage/Catalog/Model/Product/Type/Price.php"
+			],
+			[
+				"addtocart",
+				"app/design/frontend/base/default/template/catalog/product/view/addtocart.phtml"
+			],
+			[
+				"layoutexample",
+				"app/design/frontend/base/default/layout/example.xml"
+			],
+			[
+				"layoutex",
+				"app/design/adminhtml/default/default/layout/example.xml"
+			],
+			[
+				"templateeve",
+				"app/design/adminhtml/default/default/template/example/product/edit/event.phtml.bkp"
+			],
+			[
+				"templateev",
+				"app/design/adminhtml/default/default/template/example/product/edit/event.phtml"
+			],
+			[
+				"templateexamp",
+				"app/design/adminhtml/default/default/template/example.phtml"
+			],
+			[
+				"templateevent",
+				"app/design/adminhtml/default/default/template/example/product/edit/event.phtml"
+			],
+			[
+				"downloableconfig",
+				"app/code/core/Mage/Downloadable/etc/config.xml"
+			],
+			[
+				"admincatalogproductcon",
+				"code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php"
+			],
+			[
+				"button.p",
+				"lib/Zend/Form/Element/Button.php"
+			],
+			[
+				"corecontrolaction",
+				"app/code/core/Mage/Core/Controller/Varien/Action.php"
+			],
+			[
+				"obserer",
+				"lib/Varien/Event/Observer.php"
+			],
+			[
+				"log",
+				"lib/Zend/Application/Resource/Log.php"
+			],
+			[
+				"systemlog",
+				"app/code/core/Mage/Paypal/Model/System/Config/Source/Logo.php"
+			],
+			[
+				"example",
+				"js/tiny_mce/plugins/preview/example.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 806.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"17":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"33":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 283.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

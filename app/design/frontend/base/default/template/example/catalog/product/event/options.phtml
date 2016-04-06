@@ -18,7 +18,7 @@
 <dl class="product-event-ticket-list">
 <?php foreach ($this->getTicketData() as $ticket) : ?>
     <dt><label><?php echo $ticket->getTitle() ?></label><span class="price-notice">$<?php echo $ticket->getPrice() ?></span></dt>
-    <dd>Cantidad: <input class="input-text qty event-ticket-qty"  data-price="<?php echo $ticket->getPrice() ?>" name="ticket[<?php echo $ticket->getTicketId() ?>][qty]" type="text" value="<?php echo $_qty && array_key_exists($ticket->getTicketId(),$_qty) ?  $_qty[$ticket->getTicketId()]['qty'] : '' ?>" style="width:200px;height:30px"/></dd>
+    <dd>Cantidad: <input class="input-text qty event-ticket-qty"  data-price="<?php echo $ticket->getPrice() ?>" name="ticket[<?php echo $ticket->getTicketId() ?>][qty]" type="text" value="<?php echo $_qty && array_key_exists($ticket->getTicketId(),$_qty) ?  $_qty[$ticket->getTicketId()]['qty'] : '' ?>" /></dd>
 <?php endforeach; ?>
 </dl>
 
