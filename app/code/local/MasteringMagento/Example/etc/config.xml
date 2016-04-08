@@ -102,6 +102,18 @@
 
 
         <events>
+
+            <controller_action_predispatch>
+                <observers>
+                    <example_observer>
+                        <class>example/observer</class>
+                        <method>controllerActionPredispatch</method>
+                    </example_observer>
+
+                </observers>
+            </controller_action_predispatch>
+
+
             <catalog_product_get_final_price>
                 <observers>
                     <example_event>
