@@ -1,0 +1,124 @@
+<?xml version="1.0"?>   
+
+<!--
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Facebook Connect
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+ -->
+
+<layout version="1.0">
+
+    <default>
+        <reference name="right">
+            <block type="core/template" name="fbconnect.fblikebox" before="-">
+                <label>Facebook Like Box</label>
+                <action method="setTemplate" ifconfig="dropfin_fbconnect/general/show_fanbox">
+                    <template>dropfin/fbconnect/fblikebox.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </default>
+	
+    <catalog_product_view translate="label">
+        <label>Catalog Product View</label>
+        <reference name="product.info.additional">
+            <block type="core/template" name="fbconnect.fbcomment" before="-">
+                <label>Facebook Comment for Product</label>
+                <action method="setTemplate" ifconfig="dropfin_fbconnect/general/show_comment">
+                    <template>dropfin/fbconnect/fbcomment.phtml</template>
+                </action>
+            </block>
+        </reference>
+    </catalog_product_view>
+
+    <customer_account_login translate="label">
+        <reference name="head">
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_css</type>
+                <name>dropfin/fbconnect/css/styles.css</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/jquery-1.10.2.min.js</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/fbconnect.js</name>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="dropfin_fbconnect/login" name="dropfin.fblogin">
+                <action method="setTemplate" ifconfig="dropfin_fbconnect/general/login">
+                    <template>dropfin/fbconnect/form/fblogin.phtml</template>
+                </action>
+                <block type="dropfin_fbconnect/login_button" name="dropfin.fbbutton" as="dropfin_fbbutton" template="dropfin/fbconnect/form/button.phtml" />
+            </block>
+        </reference>
+    </customer_account_login>
+
+    <customer_account_create translate="label">        
+        <reference name="head">
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_css</type>
+                <name>dropfin/fbconnect/css/styles.css</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/jquery-1.10.2.min.js</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/fbconnect.js</name>
+            </action>
+        </reference>
+        <reference name="customer_form_register">
+            <action method="setTemplate" ifconfig="dropfin_fbconnect/general/login">
+                <template>dropfin/fbconnect/form/register.phtml</template>
+            </action>
+            <block type="dropfin_fbconnect/login_button" name="dropfin.fbbutton" as="dropfin_fbbutton" template="dropfin/fbconnect/form/button.phtml" />
+        </reference>        
+    </customer_account_create>
+
+    <checkout_onepage_index translate="label">
+        <reference name="head">
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_css</type>
+                <name>dropfin/fbconnect/css/styles.css</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/jquery-1.10.2.min.js</name>
+            </action>
+            <action method="addItem" ifconfig="dropfin_fbconnect/general/login">
+                <type>skin_js</type>
+                <name>dropfin/fbconnect/js/fbconnect.js</name>
+            </action>
+        </reference>
+        <reference name="checkout.onepage.login">
+            <action method="setTemplate" ifconfig="dropfin_fbconnect/general/login">
+                <template>dropfin/fbconnect/form/onepage/login.phtml</template>
+            </action>
+            <block type="dropfin_fbconnect/login_button" name="dropfin.fbbutton" as="dropfin_fbbutton" template="dropfin/fbconnect/form/button.phtml" />
+        </reference>
+    </checkout_onepage_index>
+    
+</layout>

@@ -1,0 +1,42 @@
+<?php   
+
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Facebook Connect
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+
+$fbconnect = $this->helper('dropfin_fbconnect');
+if($fbconnect->isEnable() && $fbconnect->showFanBox()){
+	$language = (trim($fbconnect->getLanguage()) != '') ? $fbconnect->getLanguage() : 'en_GB';
+	?>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/<?php echo $language;?>/sdk.js#xfbml=1&version=v2.4";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div class="fb-page" data-href="https://www.facebook.com/<?php echo $fbconnect->getFanboxPageId();?>" data-width="<?php echo $fbconnect->getFanboxWidth();?>" data-height="<?php echo $fbconnect->getFanboxHeight();?>" data-small-header="false" data-adapt-container-width="true" data-hide-cover="<?php echo $fbconnect->showCover();?>" data-show-facepile="<?php echo $fbconnect->showFaces();?>" data-show-posts="<?php echo $fbconnect->showStream();?>"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/<?php echo $fbconnect->getFanboxPageId();?>"><a href="https://www.facebook.com/<?php echo $fbconnect->getFanboxPageId();?>"><?php echo $fbconnect->getFanboxPageId();?></a></blockquote></div></div>
+	<?php
+}

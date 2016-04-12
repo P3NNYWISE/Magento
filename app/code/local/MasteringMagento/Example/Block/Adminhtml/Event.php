@@ -18,6 +18,7 @@ class MasteringMagento_Example_Block_Adminhtml_Event extends Mage_Adminhtml_Bloc
         $this->_controller = 'adminhtml_event';
         $this->_headerText = Mage::helper('example')->__('Events');
         $this->_addButtonLabel = Mage::helper('example')->__('Add New Event');
+    
 
         parent::__construct();
     }

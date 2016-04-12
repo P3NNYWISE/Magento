@@ -19,14 +19,17 @@
  * needs please refer to http://www.magento.com for more information.
  *
  * @category    design
- * @package     base_default
+ * @package     default_modern
  * @copyright   Copyright (c) 2006-2016 X.commerce, Inc. and affiliates (http://www.magento.com)
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 ?>
-<?php if($_heading = $this->getContentHeading()): ?>
-    <div class="page-title">
-    
-        <h1><?php echo $_heading; ?></h1>
-    </div>
-<?php endif; ?>
+<div style=" float:left; width:653px;">
+    <img src="<?php echo $this->getSkinUrl('images/media/home_co_main.jpg');?>" alt="" />
+</div>
+<div style="float:right; width:280px;">
+    <div style="margin:0 0 10px;" ><img src="<?php echo $this->getSkinUrl('images/media/home_co_tr.gif');?>" alt="" /></div>
+    <div><img src="<?php echo $this->getSkinUrl('images/media/home_co_br.gif');?>" alt="" /></div>
+</div>
+<div class="clearer"></div>
+<div style="margin:10px 0 0;"><img src="<?php echo $this->getSkinUrl('images/media/home_co_bottom.gif');?>" alt="" /></div>

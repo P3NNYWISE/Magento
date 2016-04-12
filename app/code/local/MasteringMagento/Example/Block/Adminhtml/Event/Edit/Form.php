@@ -36,6 +36,9 @@ class MasteringMagento_Example_Block_Adminhtml_Event_Edit_Form extends Mage_Admi
         if ($data= Mage::getSingleton('adminhtml/session')->getData('event_form_data', true))
             $this->getForm()->setValues($data);
     }
+    /**
+        Crear Form
+    **/
 
     public function _prepareForm()
     {

@@ -1,6 +1,6 @@
 <?php
 /**
- * app/code/local/MasteringMagento/Example/Helper/Data.php
+ * app/code/local/MasteringMagento/Example/controllers/Adminhtml/ExampleController.php
  *
  * This example code is provided for use with the Mastering Magento video
  * series, by Packt Publishing.
@@ -10,7 +10,15 @@
  * @package   Example
  * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
  */
-class TestingMagento_Holamundo_Helper_Data extends Mage_Core_Helper_Abstract
+
+class TestingMagento_Holamundo_Adminhtml_HolaController extends Mage_Adminhtml_Controller_Action
 {
-    // Empty helper class
+    public function indexAction()
+    {
+
+    	
+        $this->loadLayout();
+
+        return $this->renderLayout();
+    }
 }

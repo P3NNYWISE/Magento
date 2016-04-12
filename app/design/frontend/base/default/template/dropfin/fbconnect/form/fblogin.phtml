@@ -1,0 +1,44 @@
+<?php   
+
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Facebook Connect
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+
+$fbconnect = $this->helper('dropfin_fbconnect');
+if($fbconnect->isEnable() && $fbconnect->isLoginEnable()){ 
+	?>
+	<div class="account-login facebook-login fbconnect">
+		<div class="page-title">
+			<h1><?php echo $this->__('Connect with Facebook');?></h1>
+		</div>
+		<div class="col1-set">
+			<div class="col-1">
+				<div class="content new-users">
+					<h2><?php echo $fbconnect->getLoginBlockTitle();?></h2>
+					<p><?php echo $fbconnect->getLoginBlockContent();?></p>
+				</div>
+				<?php echo $this->getChildHtml('dropfin_fbbutton'); ?>				
+			</div>
+		</div>
+	</div>
+<?php 
+}

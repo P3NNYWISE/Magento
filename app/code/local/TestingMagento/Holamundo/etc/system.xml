@@ -1,0 +1,39 @@
+ <?xml version="1.0"?>
+<!DOCTYPE config>
+<!--
+/**
+ * app/code/local/MasteringMagento/Example/etc/system.xml
+ *
+ * This example code is provided for use with the Mastering Magento video
+ * series, by Packt Publishing.
+ *
+ * @author    Franklin P. Strube <franklin.strube@gmail.com>
+ * @category  MasteringMagento
+ * @package   Example
+ * @copyright Copyright (c) 2012 Packt Publishing (http://packtpub.com)
+ */
+-->
+<config>
+
+  <tabs>
+        <holamundo translate="label" module="holamundo">
+            <label>Hola Extensions</label>
+            <sort_order>1000</sort_order>
+        </holamundo>
+    </tabs>
+        <sections>
+        <holamundo_options translate="label" module="holamundo">
+            <label>Hello World Config Options</label>
+            <tab>holamundo</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>                    
+        </holamundo_options>
+    </sections>  
+
+
+
+
+</config>

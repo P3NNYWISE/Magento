@@ -4,7 +4,29 @@
             <version>0.1.0</version>
         </TestingMagento_Holamundo>
     </modules>
+    <global>
+        <models>
+            <holamundo>
+                <class>TestingMagento_Holamundo_Model</class>
+            </holamundo>
+        </models>
+    
 
+
+
+        <blocks>
+            <holamundo>
+                <class>TestingMagento_Holamundo_Block</class>
+            </holamundo>
+        </blocks>
+        <!-- Indica Carpeta raiz de los Helper del modulo-->
+        <helpers>
+            <holamundo>
+                <class>TestingMagento_Holamundo_Helper</class>
+            </holamundo>
+        </helpers>
+
+    </global>
     <frontend>
         <routers>
             <holamundo>
@@ -17,6 +39,17 @@
             </holamundo>
         </routers>  
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <holamundo before="Mage_Adminhtml">TestingMagento_Holamundo_Adminhtml</holamundo>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
 
 
 

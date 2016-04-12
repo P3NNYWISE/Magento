@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Facebook Connect
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+-->
+<config>
+    <tabs>
+        <dropfin translate="label">
+            <label>Dropfin</label>
+            <sort_order>150</sort_order>
+        </dropfin>
+    </tabs>
+    <sections>
+        <dropfin_fbconnect module="dropfin_fbconnect" translate="label">
+            <label>Facebook Connect</label>
+            <tab>dropfin</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+
+                <general module="dropfin_fbconnect" translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <enable translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+
+                        <app_id translate="label">
+                            <label>App Id</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>&lt;a href="http://developers.facebook.com/setup/" target="_blank"&gt;Register&lt;/a&gt;</comment>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </app_id>
+
+                        <app_secret translate="label">
+                            <label>App Secret</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </app_secret>
+                        
+                        <language translate="label">
+                            <label>Language</label>
+                            <frontend_type>select</frontend_type>              
+							<source_model>fbconnect/system_config_language</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<depends>
+                                <enable>1</enable>
+                            </depends>
+                        </language>
+
+                        <login translate="label">
+                            <label>Enable Login</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                        </login>
+
+                        <login_block_title translate="label">
+                            <label>Login Block Title</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <login>1</login>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </login_block_title>
+
+                        <login_block_content translate="label">
+                            <label>Login Block Content</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <login>1</login>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </login_block_content>
+
+                        <login_button_text translate="label">
+                            <label>Facebook Login Button Text</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <login>1</login>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </login_button_text>
+
+                        <show_fanbox translate="label">
+                            <label>Enable Fanbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                        </show_fanbox>
+
+                        <fb_page_id translate="label">
+                            <label>Facebook Page Id</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </fb_page_id>
+
+                        <fanbox_width translate="label">
+                            <label>Fanbox's Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <comment>Width in Pixels</comment>
+                            <validate>required-entry</validate>
+                        </fanbox_width>
+
+                        <fanbox_height translate="label">
+                            <label>Fanbox's Height</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <comment>Height in Pixels</comment>
+                            <validate>required-entry</validate>
+                        </fanbox_height>
+
+                        <show_faces translate="label">
+                            <label>Show Faces in Fanbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_faces>
+
+                        <show_stream translate="label">
+                            <label>Show Stream in Fanbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>14</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_stream>
+
+                        <show_cover translate="label">
+                            <label>Show Cover Photo in Fanbox</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_fanbox>1</show_fanbox>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </show_cover>
+                        
+                        <show_comment translate="label">
+                            <label>Facebook Comment for Product</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>16</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Comment Box will Show in Product View Page</comment>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                        </show_comment>
+
+                        <commentbox_color translate="label">
+                            <label>Comment Box's Color Theme</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>fbconnect/system_config_themes</source_model>
+                            <sort_order>17</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_comment>1</show_comment>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>                            
+                        </commentbox_color>
+
+                        <commentbox_width translate="label">
+                            <label>Comment Box's Width</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>18</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_comment>1</show_comment>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <comment>Width in Pixels</comment>
+                            <validate>required-entry</validate>
+                        </commentbox_width>
+
+                        <commentbox_no translate="label">
+                            <label>Number of Post to Display</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>19</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show_comment>1</show_comment>
+                            </depends>
+                            <depends>
+                                <enable>1</enable>
+                            </depends>
+                            <validate>required-entry</validate>
+                        </commentbox_no>
+
+                    </fields>
+                </general>
+            </groups>
+        </dropfin_fbconnect>
+    </sections>
+</config>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Dropfin
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade 
+ * this extension to newer versions in the future. 
+ *
+ * @category    Dropfin
+ * @package     Facebook Connect
+ * @copyright   Copyright (c) Dropfin (http://www.dropfin.com)
+ */
+-->
+<config>
+    <modules>
+        <Dropfin_Fbconnect>
+            <version>1.0.0</version>
+        </Dropfin_Fbconnect>
+    </modules>
+    <default>
+        <dropfin_fbconnect>
+            <general module="dropfin_fbconnect">
+                <enable>0</enable>
+                <language>en_US</language>
+                <login>0</login>
+                <login_block_title>Facebook Users</login_block_title>
+                <login_block_content>Use your Facebook account to login/register within our store.</login_block_content>
+                <login_button_text>Connect with Facebook</login_button_text>
+                <fanbox>0</fanbox>
+                <fanbox_position>right</fanbox_position>
+                <fb_page_id>Dropfin</fb_page_id>
+                <fanbox_width>250</fanbox_width>
+                <fanbox_height>300</fanbox_height>
+                <show_comment>0</show_comment>
+                <commentbox_color>light</commentbox_color>
+                <commentbox_width>600</commentbox_width>
+                <commentbox_no>5</commentbox_no>
+            </general>
+        </dropfin_fbconnect>
+    </default>
+    <frontend>
+        <routers>
+            <dropfin_fbconnect>
+                <use>standard</use>
+                <args>
+                    <module>Dropfin_Fbconnect</module>
+                    <frontName>fbconnect</frontName>
+                </args>
+            </dropfin_fbconnect>
+        </routers>      
+        <layout>
+            <updates>
+                <dropfin_fbconnect>
+                    <file>dropfin/fbconnect.xml</file>
+                </dropfin_fbconnect>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <translations>
+                    <files>
+                        <default>Dropfin_Fbconnect.csv</default>
+                    </files>
+                </translations>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <dropfin_fbconnect>
+                                            <title>Dropfin Fbconnect</title>
+                                        </dropfin_fbconnect>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <translate>
+            <modules>
+                <translations>
+                    <files>
+                        <default>Dropfin_Fbconnect.csv</default>
+                    </files>
+                </translations>
+            </modules>
+        </translate>
+    </adminhtml>
+    <global>
+        <blocks>
+            <dropfin_fbconnect>
+                <class>Dropfin_Fbconnect_Block</class>
+            </dropfin_fbconnect>            
+        </blocks>        
+        <helpers>
+            <dropfin_fbconnect>
+                <class>Dropfin_Fbconnect_Helper</class>
+            </dropfin_fbconnect>
+        </helpers>
+        <models>
+            <fbconnect>
+                <class>Dropfin_Fbconnect_Model</class>
+            </fbconnect>
+        </models>
+        <resources>
+            <fbconnect_setup>
+                <setup>
+                    <module>Dropfin_Fbconnect</module>
+                    <class>Dropfin_Fbconnect_Model_Resource_Setup</class>
+                </setup>
+            </fbconnect_setup>
+        </resources>      
+    </global> 
+</config>

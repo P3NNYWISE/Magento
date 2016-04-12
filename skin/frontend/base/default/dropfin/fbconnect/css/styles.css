@@ -1,0 +1,8 @@
+.facebook-login {margin-top: 20px;}
+.account-create .facebook-login .buttons-set{margin: 10px 0px;max-width: 100%;}
+.fblogin-separator {display: block; margin: 10px auto; position: relative; text-align: center; line-height: 16px!important; top: auto; left: auto; height: auto; width: auto; line-height: normal; overflow: visible; font-size: 13px; }
+.fblogin-separator table { width: 100%; }
+.fblogin-separator table td {vertical-align: middle; }
+.fblogin-separator .border-line { border-top: 1px solid #e5e2e2; width: 100%; }
+.fblogin-separator .border-text { color: #636363;; text-align: center; font-size: 11px; width: 25px!important; }
+.fbconnect.account-login .content {min-height: inherit;}

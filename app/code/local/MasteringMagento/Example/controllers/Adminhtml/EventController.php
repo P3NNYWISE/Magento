@@ -16,8 +16,9 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
     {
         $this->loadLayout();
         $this->_setActiveMenu('example/events');
-
+        
         $this->_addContent(
+            #$this->getLayout()->createBlock('example/adminhtml_event')
             $this->getLayout()->createBlock('example/adminhtml_event')
         );
 
@@ -140,7 +141,7 @@ class MasteringMagento_Example_Adminhtml_EventController extends Mage_Adminhtml_
     {
         // TODO follow along with the video!
 
-        $filename ='events.xls';
+        $filename ='events.xlsx';
         $grid =  $this->getLayout()->createBlock('example/adminhtml_event_grid');
         $this->_prepareDownloadResponse($filename , $grid->getExcelFile($filename));
     }
