@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MyMods_Extraconfig>
+            <version>1.0.0</version>
+            <depends>
+            <!-- no dependencies -->
+            </depends>
+        </MyMods_Extraconfig>
+    </modules>
+    <global>
+        <models>
+          <extraconfig>
+                <class>MyMods_Extraconfig_Model</class>
+            </extraconfig>
+        </models>
+            <helpers>
+        <extraconfig>
+            <class>MyMods_Extraconfig_Helper</class>
+        </extraconfig>
+    </helpers>
+    </global>
+
+        <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <extraconfig_options>
+                                            <title>Store Hello World Module Section</title>
+                                        </extraconfig_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+
+
+
+</config> 
