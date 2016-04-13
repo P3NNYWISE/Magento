@@ -26,7 +26,9 @@
                 	<fields>
 			        	<hello_message>
 			            <label>Message</label>
+			             <comment>Comentario</comment>
 			            <frontend_type>text</frontend_type>
+			            <tooltip>tooltip</tooltip>
 			            <sort_order>1</sort_order>
 			            <show_in_default>1</show_in_default>
 			            <show_in_website>1</show_in_website>
@@ -40,15 +42,18 @@
 					        <show_in_website>1</show_in_website>
 					        <show_in_store>1</show_in_store>                    
 					    </hello_time> 
-						<hello_select>
+						<hello_select translate="label">
 						    <label>Message</label>
 						    <frontend_type>select</frontend_type>
+						    <!--
 						    <source_model>extraconfig/words</source_model> 
+							-->
 						    <sort_order>1</sort_order>
 						    <show_in_default>1</show_in_default>
 						    <show_in_website>1</show_in_website>
 						    <show_in_store>1</show_in_store>                    
 						</hello_select>
+
 
     				</fields>
 
@@ -62,14 +67,16 @@
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>                
                 	<fields>
-			        	<hello1_message>
-			            <label>Message</label>
+			        	<email_message>
+			            <label>Email</label>
+			            <comment>Email@domain.com</comment>
 			            <frontend_type>text</frontend_type>
+			            <validate>validate-email</validate>
 			            <sort_order>1</sort_order>
 			            <show_in_default>1</show_in_default>
 			            <show_in_website>1</show_in_website>
 			            <show_in_store>1</show_in_store>                    
-			        	</hello1_message>
+			        	</email_message>
     				</fields>
 
                 </otrogrupo>

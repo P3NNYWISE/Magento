@@ -14,12 +14,29 @@
                 <class>MyMods_Extraconfig_Model</class>
             </extraconfig>
         </models>
-            <helpers>
-        <extraconfig>
+        <helpers>
+            <extraconfig>
             <class>MyMods_Extraconfig_Helper</class>
-        </extraconfig>
-    </helpers>
+            </extraconfig>
+        </helpers>
     </global>
+    <frontend>
+        <routers>
+            <extraconfig>
+                <use>standard</use>
+                <args>
+                    <module> MyMods_Extraconfig</module>
+                    <frontName>extraconfig</frontName>
+                </args>
+            </extraconfig>
+        </routers>  
+    </frontend>
+
+
+
+
+
+
 
         <adminhtml>
         <acl>
