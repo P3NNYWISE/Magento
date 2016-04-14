@@ -1,0 +1,50 @@
+<?php
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+/**
+ * Articulo children list template
+ *
+ * @category    MyExtension
+ * @package     MyExtension_Mymodule
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php $_articulos = $this->getArticulos(); ?>
+<?php if ($_articulos->getSize() > 0) :?>
+    <div class="page-title articulo-title">
+        <h2><?php echo $this->getCurrentArticulo()->getTitulo(); ?>:<?php echo $this->__('Children')?></h2>
+    </div>
+    <?php if ($this->_getDisplayMode() == 0) : ?>
+        <div class="articulo-list-container">
+            <?php foreach ($_articulos as $_articulo) : ?>
+                <div class="articulo-list-item">
+                    <a href="<?php echo $_articulo->getArticuloUrl();?>" title="<?php echo $this->escapeHtml($_articulo->getTitulo()) ?>">
+                        <?php echo $_articulo->getTitulo(); ?>
+                    </a>
+                </div>
+            <?php endforeach;?>
+        </div>
+    <?php else : ?>
+        <ul id="articulos-list">
+            <?php foreach ($_articulos as $_articulo) : ?>
+                <?php echo $this->drawArticulo($_articulo);?>
+            <?php endforeach;?>
+        </ul>
+        <script type="text/javascript">
+            mymoduleTree('articulos-list');
+        </script>
+    <?php endif;?>
+<?php endif;?>

@@ -1,0 +1,58 @@
+<?php 
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+/**
+ * Articulo list template
+ *
+ * @category    MyExtension
+ * @package     MyExtension_Mymodule
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php $_articulos = $this->getArticulos(); ?>
+<div class="page-title articulo-title">
+    <?php if (Mage::helper('myextension_mymodule/articulo')->isRssEnabled()) : ?>
+        <a href="<?php echo Mage::helper('myextension_mymodule/articulo')->getRssUrl();?>" class="link-rss"><?php echo Mage::helper('myextension_mymodule')->__('Subscribe to RSS Feed')?></a>
+    <?php endif;?>
+    <h1><?php echo Mage::helper('myextension_mymodule')->__('Articulos') ?></h1>
+</div>
+<?php if ($_articulos->getSize() > 0) :?>
+    <?php if ($this->_getDisplayMode() == 0) : ?>
+        <?php echo $this->getPagerHtml(); ?>
+        <div class="articulo-list-container">
+            <?php foreach ($_articulos as $_articulo) : ?>
+                <div class="articulo-list-item">
+            <a href="<?php echo $_articulo->getArticuloUrl()?>">
+                <?php echo $_articulo->getTitulo();?>
+            </a><br />
+                </div>
+            <?php endforeach;?>
+        </div>
+        <?php echo $this->getPagerHtml(); ?>
+    <?php else : ?>
+        <ul id="articulos-list">
+            <?php foreach ($_articulos as $_articulo) : ?>
+                <?php echo $this->drawArticulo($_articulo);?>
+            <?php endforeach;?>
+        </ul>
+        <script type="text/javascript">
+            mymoduleTree('articulos-list');
+        </script>
+    <?php endif;?>
+<?php else : ?>
+    <?php echo Mage::helper('myextension_mymodule')->__('There are no articulos at this moment');?>
+<?php endif;?>

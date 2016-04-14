@@ -1,0 +1,37 @@
+<?php
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+/**
+ * Articulo list template on product page
+ *
+ * @category    MyExtension
+ * @package     MyExtension_Mymodule
+ * @author      Ultimate Module Creator
+ */
+?>
+<?php $articulos = $this->getArticuloCollection();?>
+<?php if ($articulos && $articulos->count() > 0) :?>
+<div class="box-collateral box-articulos box-up-sell">
+    <h2>Articulos</h2>
+    <?php foreach ($articulos as $_articulo) : ?>
+        <div class="item">
+            <a href="<?php echo $_articulo->getArticuloUrl()?>">
+                <?php echo $_articulo->getTitulo();?>
+            </a><br />
+        </div>
+    <?php endforeach; ?>
+</div>
+<?php endif;?>

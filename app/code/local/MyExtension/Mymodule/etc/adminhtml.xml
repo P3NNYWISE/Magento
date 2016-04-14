@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <myextension_mymodule translate="title" module="myextension_mymodule">
+                                        <title>Mymodule</title>
+                                    </myextension_mymodule>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <myextension_mymodule translate="title" module="myextension_mymodule">
+                        <title>MyMenu</title>
+                        <children>
+                            <articulo translate="title" module="myextension_mymodule">
+                                <title>Articulo</title>
+                                <sort_order>0</sort_order>
+                            </articulo>
+                            <articulo_comments translate="title" module="myextension_mymodule">
+                                <title>Manage Articulo Comments</title>
+                                <sort_order>5</sort_order>
+                            </articulo_comments>
+                            <articulo_attributes translate="title" module="myextension_mymodule">
+                                <title>Manage Articulo attributes</title>
+                                <sort_order>7</sort_order>
+                            </articulo_attributes>
+                        </children>
+                    </myextension_mymodule>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <myextension_mymodule translate="title" module="myextension_mymodule">
+            <title>MyMenu</title>
+            <sort_order>1500</sort_order>
+            <children>
+                <articulo translate="title" module="myextension_mymodule">
+                    <title>Articulo</title>
+                    <action>adminhtml/mymodule_articulo</action>
+                    <sort_order>0</sort_order>
+                </articulo>
+                <articulo_comments translate="title" module="myextension_mymodule">
+                    <title>Manage Articulo Comments</title>
+                    <action>adminhtml/mymodule_articulo_comment</action>
+                    <sort_order>4</sort_order>
+                </articulo_comments>
+                <articulo_attributes translate="title" module="myextension_mymodule">
+                    <title>Manage Articulo Attributes</title>
+                    <action>adminhtml/mymodule_articulo_attribute</action>
+                    <sort_order>7</sort_order>
+                </articulo_attributes>
+            </children>
+        </myextension_mymodule>
+    </menu>
+</config>

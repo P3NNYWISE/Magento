@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<widgets>
+    <mymodule_articulo_view type="myextension_mymodule/articulo_widget_view" translate="name description" module="myextension_mymodule">
+        <name>Articulo view</name>
+        <description>Articulo view widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <articulo_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Articulo</label>
+                <type>label</type>
+                <helper_block>
+                    <type>myextension_mymodule/adminhtml_articulo_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Articulo</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>120</sort_order>
+            </articulo_id>
+        </parameters>
+    </mymodule_articulo_view>
+    <mymodule_articulo_link type="myextension_mymodule/articulo_widget_link" translate="name description" module="myextension_mymodule">
+        <name>Articulo link</name>
+        <description>Articulo link widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <articulo_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Articulo</label>
+                <type>label</type>
+                <helper_block>
+                    <type>myextension_mymodule/adminhtml_articulo_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Articulo</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>130</sort_order>
+            </articulo_id>
+        </parameters>
+    </mymodule_articulo_link>
+    <mymodule_articulo_subtree type="myextension_mymodule/articulo_widget_subtree" translate="name description" module="myextension_mymodule">
+        <name>Articulo subtree</name>
+        <description>Articulo subtree widget</description>
+        <is_email_compatible>0</is_email_compatible>
+        <parameters>
+            <articulo_id type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <label>Articulo</label>
+                <type>label</type>
+                <helper_block>
+                    <type>myextension_mymodule/adminhtml_articulo_widget_chooser</type>
+                    <data>
+                        <button translate="open">
+                            <open>Select Articulo</open>
+                        </button>
+                    </data>
+                </helper_block>
+                <sort_order>10</sort_order>
+            </articulo_id>
+            <recursion type="complex" translate="label">
+                <visible>1</visible>
+                <required>1</required>
+                <value>0</value>
+                <label>Levels to show (0 for all)</label>
+                <type>text</type>
+                <sort_order>20</sort_order>
+            </recursion>
+        </parameters>
+    </mymodule_articulo_subtree>
+</widgets>

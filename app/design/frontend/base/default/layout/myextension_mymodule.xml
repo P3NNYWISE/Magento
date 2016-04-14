@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MyExtension_Mymodule extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       MyExtension
+ * @package        MyExtension_Mymodule
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<layout>
+    <default>
+    <reference name="head">
+        <action method="addCss"><js>css/myextension_mymodule/tree.css</js></action>
+    </reference>
+    </default>
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="myextension_mymodule"><name>articulo_comments</name><path>myextension_mymodule/articulo_customer_comment</path><label>Articulos Comments</label></action>
+        </reference>
+    </customer_account>
+    <myextension_mymodule_articulo_index translate="label" module="myextension_mymodule">
+        <label>Articulos list</label>
+        <update handle="page_two_columns_left" />
+        <reference name="head">
+            <action method="addItem" ifconfig="myextension_mymodule/articulo/tree"><type>skin_js</type><js>js/myextension_mymodule/tree.js</js></action>
+        </reference>
+        <reference name="content">
+            <block type="myextension_mymodule/articulo_list" name="articulo_list" template="myextension_mymodule/articulo/list.phtml" />
+        </reference>
+    </myextension_mymodule_articulo_index>
+    <myextension_mymodule_articulo_view translate="label" module="myextension_mymodule">
+        <label>Articulo view page</label>
+        <update handle="page_two_columns_left" />
+        <reference name="head">
+            <action method="addItem" ifconfig="myextension_mymodule/articulo/tree"><type>skin_js</type><js>js/myextension_mymodule/tree.js</js></action>
+        </reference>
+        <reference name="content">
+            <block type="myextension_mymodule/articulo_view" name="articulo_view" template="myextension_mymodule/articulo/view.phtml" />
+            <block type="myextension_mymodule/articulo_children" name="articulo_children" template="myextension_mymodule/articulo/children.phtml" />
+            <block type="myextension_mymodule/articulo_catalog_product_list" name="articulo.info.products" as="articulo_products" template="myextension_mymodule/articulo/catalog/product/list.phtml" />
+            <block type="myextension_mymodule/articulo_catalog_category_list" name="articulo.info.categories" as="articulo_categories" template="myextension_mymodule/articulo/catalog/category/list.phtml" />
+            <block type="myextension_mymodule/articulo_comment_list" name="articulo.comments_list" as="articulo_comment_list" template="myextension_mymodule/articulo/comment/list.phtml">
+                <block type="myextension_mymodule/articulo_comment_form" name="comment_form" as="comment_form" template="myextension_mymodule/articulo/comment/form.phtml" />
+            </block>
+        </reference>
+    </myextension_mymodule_articulo_view>
+    <myextension_mymodule_articulo_rss translate="label" module="myextension_mymodule">
+        <label>Articulos rss feed</label>
+        <block type="myextension_mymodule/articulo_rss" output="toHtml" name="myextension_mymodule.articulo.rss" />
+    </myextension_mymodule_articulo_rss>
+    <rss_index_index>
+        <reference name="content">
+            <block type="myextension_mymodule/rss" name="mymodule.rss" template="myextension_mymodule/rss.phtml">
+                <action method="addFeed" ifconfig="myextension_mymodule/articulo/rss" translate="label" module="myextension_mymodule">
+                    <label>Articulos</label>
+                    <url helper="myextension_mymodule/articulo/getRssUrl" />
+                </action>
+            </block>
+        </reference>
+    </rss_index_index>
+    <catalog_product_view>
+        <reference name="product.info">
+            <block type="myextension_mymodule/catalog_product_list_articulo" name="product.info.articulos" as="product_articulos" template="myextension_mymodule/catalog/product/list/articulo.phtml">
+                <action method="addToParentGroup"><group>detailed_info</group></action>
+                <action method="setTitle" translate="value" module="myextension_mymodule"><value>Articulos</value></action>
+            </block>
+        </reference>
+    </catalog_product_view>
+    <myextension_mymodule_category>
+        <reference name="content">
+            <block type="myextension_mymodule/catalog_category_list_articulo" name="category.info.articulos" as="category_articulos" template="myextension_mymodule/catalog/category/list/articulo.phtml" after="-" />
+        </reference>
+    </myextension_mymodule_category>
+    <catalog_category_default>
+        <update handle="myextension_mymodule_category" />
+    </catalog_category_default>
+    <catalog_category_layered>
+        <update handle="myextension_mymodule_category" />
+    </catalog_category_layered>
+    <myextension_mymodule_articulo_customer_comment_index translate="label" module="myextension_mymodule">
+        <label>My Articulos comments</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="myextension_mymodule/articulo_customer_comment_list" name="customer_articulo_comments" template="myextension_mymodule/articulo/customer/comment/list.phtml"/>
+        </reference>
+    </myextension_mymodule_articulo_customer_comment_index>
+    <myextension_mymodule_articulo_customer_comment_view translate="label" module="myextension_mymodule">
+        <label>My Articulos comment view</label>
+        <update handle="customer_account"/>
+        <reference name="my.account.wrapper">
+            <block type="myextension_mymodule/articulo_customer_comment_view" name="customer_articulo_comment" template="myextension_mymodule/articulo/customer/comment/view.phtml"/>
+        </reference>
+    </myextension_mymodule_articulo_customer_comment_view>
+</layout>
