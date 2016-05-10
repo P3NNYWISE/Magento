@@ -15,8 +15,22 @@ class MasteringMagento_Example_IndexController extends Mage_Core_Controller_Fron
     public function indexAction()
     {
 
+    	#Testing Roles 
+    	/*
+    	mage::log(Mage::getModel('admin/roles'));
+		$roles = Mage::getModel('admin/roles')->getCollection();
+		foreach ($roles as $rol) {
+			# code...
+			if ($rol->getRoleName() == "Users"){
 
+				mage::log("heelo Users");
+			}
+
+
+		}
+		*/
         $this->loadLayout();
         return $this->renderLayout();
     }
 }
+

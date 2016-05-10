@@ -140,6 +140,16 @@
                 </observers>
             </sales_order_place_after>
 
+    <core_block_abstract_prepare_layout_after>
+      <observers>
+          <example_event>
+       
+                  <class>example/observer_tabs</class>
+                  <method>RemoveTab</method>
+          </example_event>
+          </observers>
+    </core_block_abstract_prepare_layout_after>
+
 
 
         </events>
